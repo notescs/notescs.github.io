@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://notescs.gitlab.io',
   pathPrefix: '/',
-  title: '',
+  title: 'Notes on CS',
   subtitle: '',
   copyright: '© All rights reserved.',
   disqusShortname: '',
