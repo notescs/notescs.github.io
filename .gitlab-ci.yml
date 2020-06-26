@@ -4,12 +4,12 @@ image: node:latest
 cache:
   paths:
     - node_modules/
-    # Enables git-lab CI caching. Both .cache and public must be cached, otherwise builds will fail.
+    # Enables gitlab CI caching. Both .cache and public must be cached, otherwise builds will fail.
     - .cache/
     - public/
 pages:
   script:
-    - npm install
+    - yarn install
     - ./node_modules/.bin/gatsby build --prefix-paths
   artifacts:
     paths:

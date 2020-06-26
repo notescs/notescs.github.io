@@ -25,7 +25,7 @@ module.exports = {
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'CS Notes',
     photo: '/photo.jpg',
     bio: '',
     contacts: {
