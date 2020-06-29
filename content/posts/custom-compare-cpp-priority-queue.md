@@ -11,7 +11,7 @@ tags:
 description: ""
 ---
 
-A priority queue is a queue where the elements stay in certain sorted order. We
+A priority queue is a queue where the elements stay in a certain sorted order. We
 can also provide a `Compare` type for custom ordering.
 
 _Defined in header `queue`_
@@ -33,7 +33,7 @@ the "last" element according to the weak ordering imposed by Compare.
 
 ## Example: Top k Frequent Words
 
-Given a list of words return the `k` most frequent elements. The answer should
+Given a list of words, return the `k` most frequent elements. The answer should
 be sorted by frequency from highest to lowest. If two words have the same
 frequency, then the word with the lower alphabetical order comes first. `k` is
 always valid, that is 1 <= k <= number of unique words.
@@ -44,12 +44,12 @@ For example, for the given list and k = 2,
 ["hello", "world", "hello", "earth", "planet", "world"]
 ```
 
-Return `["hello", "world"]` as they have the highest frequency and soted
+Return `["hello", "world"]` as they have the highest frequency and sorted
 according to the alphabetical order.
 
 ### Approach 1: Sorting
 
-In a hasmap, keep the count of the words and then push the words along with
+In a hashmap, keep the count of the words and then push the words along with
 their counts in a list and then sort the list. At last, return the first `k`
 elements.
 
@@ -82,7 +82,7 @@ Space complexity: `O(N)`
 
 ## Approach 2: Priority Queue
 
-Another efficient approach is using priority queue. In the priority queue we
+Another efficient approach is using a priority queue. In the priority queue we
 will always maintain the top k frequent words. Note the `comp` function below.
 If the priority queue size exceeds `k`, we will pop the top most element (as it
 has the lowest count).
