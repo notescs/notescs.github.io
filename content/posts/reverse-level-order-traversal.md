@@ -1,6 +1,6 @@
 ---
 title: Binary Tree Reverse Level Order Traversal
-date: 03-07-2020
+date: "2020-07-03"
 template: post
 draft: false
 slug: reverse-level-order-traversal
