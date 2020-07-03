@@ -4,7 +4,7 @@ date: "2020-06-26"
 template: "post"
 draft: false
 slug: "top-k-frequent-words"
-category: "interviews"
+category: "Data Structures & Algorithms"
 tags:
   - "cpp"
   - "priority queue"
