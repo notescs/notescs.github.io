@@ -14,7 +14,7 @@ tags:
 description: "Solve the problem using binary search and math"
 ---
 
-Given a total of `n` coins find total number of full staircase rows that can be
+Given a total of `n` coins find the total number of full staircase rows that can be
 built.
 
 Staircase rows are those where `i`-th row has `i` coins.
