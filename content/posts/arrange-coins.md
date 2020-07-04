@@ -46,8 +46,15 @@ $1 + 2 + 3 + ... + k = k*(k + 1) / 2$ coins.
 
 So we need to find maximum k such that, $k*(k + 1) / 2 <= n$.
 
-Since this is an increasing function of k, we can use binary search to solve this
+Since $n$ is an increasing function of $k$, we can use binary search to solve this
 problem.
+
+We initialize `low` and `high` as `0` and `n` respectively. In each step, we calculate
+the value of coins required using the formula $n = k*(k + 1) / 2$ where `k` is the
+middle element between `low` and `high`. If the required coins are greater than
+`n` the value of `high` is updated to `k - 1` and if its less than `n`, the value
+of `low` is updated to `k + 1`. Since we reduce the search space by half at each
+iteration, the time complexity is $O(logN)$, where N is the number of coins.
 
 C++ code:
 
@@ -76,7 +83,6 @@ int main() {
     cout << 6 << " " << arrangeCoins(6) << endl;
     cout << 9 << " " << arrangeCoins(9) << endl;
 }
-
 ```
 
 Python code:
@@ -100,7 +106,6 @@ def arrangeCoins(n):
 if __name__ == '__main__':
     print(6, arrangeCoins(6))  # n = 6, prints 3
     print(9, arrangeCoins(9))  # n = 9, prints 3
-
 ```
 
 Time Complexity: $O(logN)$ due to binary search
@@ -112,9 +117,11 @@ Space Complexity: $O(1)$
 We have formulated the equation:
 
 $$
-k*(k + 1) / 2 <= n
-\implies k^2 + k <= 2*n
-\implies k^2 + k - 2*n <=0
+\begin{aligned}
+k*(k + 1) / 2 &<= n\\
+k^2 + k &<= 2*n\\
+k^2 + k - 2*n &<=0
+\end{aligned}
 $$
 
 We can use Sridharacarya's formula to solve this equation:
@@ -149,7 +156,6 @@ def arrangeCoins(n):
 if __name__ == '__main__':
     print(6, arrangeCoins(6))  # n = 6, prints 3
     print(9, arrangeCoins(9))  # n = 9, prints 3
-
 ```
 
 Time Complexity: $O(1)$
