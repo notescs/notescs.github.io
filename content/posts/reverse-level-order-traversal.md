@@ -10,6 +10,7 @@ tags:
   - "binary-tree"
   - "dfs"
   - "bfs"
+  - "easy"
 description: "Given a binary tree, print its reverse level order traversal"
 ---
 
