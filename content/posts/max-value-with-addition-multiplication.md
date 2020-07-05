@@ -30,15 +30,15 @@ maximum answer obtainable from the answer of `2` and `3`, `1` and `4`. Thus, thi
 problem has an **optimal substructure** property.
 
 ```text
-                          5
-                /                 \
-            op(1, 4)            op(2, 3)
-            /  \                /       \
-          1   op(2, 2)       op(1, 1)  op(1, 2)
-              /      \          / \      /  \
-            op(1, 1) op(1, 1)  1   1    1   op(1, 1)
-            / \      / \                    / \
-          1     1   1   1                  1   1
+                    5
+        /                 \
+    op(1, 4)            op(2, 3)
+    /  \                /       \
+    1   op(2, 2)       op(1, 1)  op(1, 2)
+        /      \          / \      /  \
+    op(1, 1) op(1, 1)    1   1    1   op(1, 1)
+    / \      / \                    / \
+  1     1   1   1                  1   1
 ```
 
 Here, op(m, n) = max(answer for m + answer for n, answer for m * answer for n).
