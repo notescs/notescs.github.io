@@ -48,11 +48,43 @@ to count the number of set bits.
 C++ code:
 
 ```cpp
+#include<iostream>
+using namespace std;
+
+int countSetBits(int n) {
+    int count = 0;
+    while (n > 0) {
+        n = n & (n - 1); // clear the right-most bit
+        ++count;
+    }
+    return count;
+}
+
+int countDifferntBits(int a, int b) {
+    return countSetBits(a ^ b);
+}
+
+int main() {
+    cout << "Number of different bits of " << 19 << " and " << 10 << " is " << countDifferntBits(19, 10) << "\n";
+    return 0;
+}
 ```
 
 Python code:
 
 ```python
+def count_set_bits(n):
+    count = 0
+    while n > 0:
+        n = n & (n - 1)  # clear the right most bit
+        count += 1
+    return count
+
+def count_different_bits(a, b):
+    return count_set_bits(a ^ b)
+
+if __name__ == '__main__':
+    print('Number of different bits of', 19, 'and', 10, 'is', count_different_bits(19, 10))
 ```
 
 Time Complexity: $O(log(min(a, b)))$  
