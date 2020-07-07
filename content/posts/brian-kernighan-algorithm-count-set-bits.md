@@ -25,7 +25,7 @@ Explanation: Binary representation of 42 is 101010
 
 ## Approach-1: Naive
 
-Naive algorithm is to use to binary representation of the number and count the
+Naive algorithm is to use the binary representation of the number and count the
 number of set bits.
 
 C++ code:
@@ -38,7 +38,7 @@ int countSetBits(int n) {
     int count = 0;
     while (n > 0) {
         count += n & 1; // check if the last bit is set
-        n = n >> 1; // right shift by 1 is equivalent to division by 1
+        n = n >> 1; // right shift by 1 is equivalent to division by 2
     }
     return count;
 }
@@ -71,7 +71,7 @@ Space Complexity: $O(1)$ as we are not using any extra space
 
 ## Approach-2: Brian Kernighan Algorithm
 
-`n = n & (n - 1)` clears the right most set bit. Let us take a look at some
+`n = n & (n - 1)` clears the rightmost set bit. Let us take a look at some
 examples.
 
 ```text
@@ -141,5 +141,5 @@ if __name__ == '__main__':
     print('Number of set bits of', 42, 'is', count_set_bits(42))
 ```
 
-Time Complexity: $O(logN)$ when N has all of its bit set
+Time Complexity: $O(logN)$ when N has all of its bit set  
 Space Complexity: $O(1)$ as we are not using any extra space
