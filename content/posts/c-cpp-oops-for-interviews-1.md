@@ -1,6 +1,6 @@
 ---
 title: C, C++ and OOPS for Interviews Part-1
-date: 02-07-2020
+date: "2020-07-07"
 template: post
 draft: true
 slug: c-cpp-oops-for-interviews-1

@@ -2,7 +2,7 @@
 title: Number of Differing Bits 
 date: "2020-07-06"
 template: "post"
-draft: true
+draft: false
 slug: "number-of-differing-bits"
 category: "Data Structures & Algorithms"
 tags:
