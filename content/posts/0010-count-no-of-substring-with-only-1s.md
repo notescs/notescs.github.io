@@ -19,7 +19,8 @@ Given a binary string, count no of substrings with only 1's.
 
 Input: "11101101"  
 Output: 10  
-Explanation: Number of substring with 1 '1' - 6, 2 '1' - 3, 3 '1' - 1.
+Explanation: "1" occurs 6 times, "11" occurs 3 times and "111" occurs 1 time. Thus
+number of substrings with only 1's = 6 + 3 + 1 = 10.
 
 ## Approach: Sliding Window
 
