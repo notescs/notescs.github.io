@@ -24,9 +24,17 @@ number of substrings with only 1's = 6 + 3 + 1 = 10.
 
 ## Approach: Sliding Window
 
+### Intuition
+
 We can see that a '0' divides block of '1's. For a block of '1' with length `l`
 has $1 + 2 + 3 + ... + l = l * (l + 1) / 2$ substrings. Thus, we only need to
 count the length of each block of 1's and use the above formula.
+
+For example, the string "11101101" can be divided into blocks of 1's having
+3 characters, 2 characters and 1 character which will give 3 * (3 + 1) / 2 = 6,
+2 * (2 + 1) / 2 = 3 and 1 * (1 + 1) / 2 = 1 substring respectively.
+
+### Implementation
 
 C++ code:
 
@@ -85,5 +93,7 @@ if __name__ == '__main__':
     print("Number of substring with only 1's for 11101101 is", sub_count('11101101'))
 ```
 
-**Time Complexity**: $O(n)$ where $n$ is the length of string.  
-**Space Complexity**: $O(1)$ as we are not using any extra space.
+### Complexity Analysis
+
+- **Time Complexity**: $O(n)$ where $n$ is the length of string.
+- **Space Complexity**: $O(1)$ as we are not using any extra space.
