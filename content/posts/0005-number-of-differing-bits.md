@@ -1,6 +1,6 @@
 ---
 title: Number of Differing Bits 
-date: "2020-07-06"
+date: "2020-07-07"
 template: "post"
 draft: false
 slug: "number-of-differing-bits"
@@ -13,8 +13,8 @@ description: "Given two integers count the number of positions where there bit
 representation differ"
 ---
 
-Given two integers count the number of positions where there bit
-representation differ. A simple approach is to use their binary representation and
+Given two integers count the number of positions where their bit
+representation differs. A simple approach is to use their binary representation and
 compare them. They can also be compared on the fly.
 
 ## Approach : XOR
