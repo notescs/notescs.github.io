@@ -4,10 +4,9 @@ date: "2020-07-07"
 template: post
 draft: false
 slug: c-cpp-oops-for-interviews-1
-category: "interviews"
+category: "OOPS"
 tags:
   - "cpp"
-  - "oops"
 description: "A note on Features of OOP, Access Specifiers, Classes and Inheritance, Constructors and Destructors"
 ---
 
@@ -45,15 +44,16 @@ public:
 
 class Car: public Vehicle {
 public:
-    void whoIAm() {
-        cout << "I am a car." << endl;
+    void whatsMyColor() {
+        cout <<"My color is blue." << endl;
     }
 };
 
 
 int main() {
     Car car;
-    car.whoIAm(); // prints "I am a car."
+    car.whoIAm();  // prints "I am a vehicle."
+    car.whatsMyColor();  // prints "My color is blue."
     return 0;
 }
 ```
@@ -116,7 +116,7 @@ public:
 
 int main() {
     Vehicle vehicle(1, "BMW");
-    vehicle.whoIAm(); // prints "I am a car."
+    vehicle.whoIAm(); // prints "I am a vehicle."
     return 0;
 }
 ```
