@@ -13,7 +13,8 @@ tags:
 description: "Given a binary string, count no of substrings with only 1's."
 ---
 
-Given a binary string, count no of substrings with only 1's.
+Given a binary string, count no of substrings with only 1's. Since the resulting
+count can be huge, return it modulo $10^9 + 7$.
 
 **Example**:
 
@@ -26,7 +27,7 @@ number of substrings with only 1's = 6 + 3 + 1 = 10.
 
 ### Intuition
 
-We can see that a '0' divides block of '1's. For a block of '1' with length `l`
+We can see that a '0' divides two blocks of '1's. For a block of '1' with length `l`
 has $1 + 2 + 3 + ... + l = l * (l + 1) / 2$ substrings. Thus, we only need to
 count the length of each block of 1's and use the above formula.
 
