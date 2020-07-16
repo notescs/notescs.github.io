@@ -48,13 +48,13 @@ jobs:
       - run: yarn install --pure-lockfile
         name: Install dependencies
 
-      - run: yarn lint
-        name: Run ESLint
+      # - run: yarn lint
+      #   name: Run ESLint
 
-      - run: yarn jest --color
-        name: Run Test
-        env:
-          CI: true
+      # - run: yarn jest --color
+      #   name: Run Test
+      #   env:
+      #     CI: true
 
       - run: yarn build --log-pages && yarn deploy
         name: Build
@@ -64,6 +64,7 @@ jobs:
           GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
           NODE_ENV: production
           ENVIRONMENT: ${{ contains(github.ref, 'master') && 'production' || 'staging'}}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: Deploy to Netlify
       #   uses: nwtgck/actions-netlify@v1.0
