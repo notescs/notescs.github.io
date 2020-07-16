@@ -56,9 +56,7 @@ jobs:
         env:
           CI: true
 
-      - run:
-          - yarn build --log-pages
-          - yarn deploy
+      - run: yarn build --log-pages && yarn deploy
         name: Build
         env:
           # incremental builds
