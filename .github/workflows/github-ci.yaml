@@ -58,7 +58,7 @@ jobs:
       #   env:
       #     CI: true
 
-      - run: yarn build --log-pages
+      - run: mv config.js.github config.js && yarn build --log-pages
         name: Build
         env:
           # incremental builds
