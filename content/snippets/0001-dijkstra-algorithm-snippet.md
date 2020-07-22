@@ -96,4 +96,4 @@ int main() {
 ### Complexity Analysis
 
 - **Time Complexity**: $O(ElogE)$
-- **Space Complexity**: $O(E)$
+- **Space Complexity**: $O(V + E)$
