@@ -9,7 +9,7 @@ tags:
   - "cpp"
   - "python"
   - "easy" # Change this
-description: "template" # Change this
+description: "template." # Change this
 ---
 
 ## Approach

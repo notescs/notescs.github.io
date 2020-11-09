@@ -1,5 +1,5 @@
 ---
-title: Check if a binary tree is balanced or not
+title: Check if a Binary Tree is Balanced or Not
 date: "2020-11-06"
 template: "post"
 slug: "balanced-binary-tree"
@@ -8,7 +8,7 @@ tags:
   - "cpp"
   - "Binary Tree"
   - "easy"
-description: "Check if a binary tree is balanced or not"
+description: "Given root of a binary tree, check if it is balanced or not."
 ---
 
 We define a height-balanced binary tree as a "binary tree whose the height of left and right subtree of every node doesn't differ by more than 1".
