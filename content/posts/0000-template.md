@@ -1,14 +1,15 @@
 ---
-title: Template
-date: "2020-06-26"
+title: Template # Change this
+date: "2020-06-26" # Change this
 template: "post"
-draft: true
-slug: "template"
+draft: true # Change this
+slug: "template" # Change this
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
   - "python"
-description: "template"
+  - "easy" # Change this
+description: "template" # Change this
 ---
 
 ## Approach
