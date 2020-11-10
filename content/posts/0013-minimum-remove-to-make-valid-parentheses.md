@@ -13,7 +13,7 @@ description: "Given a string, remove minimum number of parentheses to make it
 balanced."
 ---
 
-**Problem**
+## Problem
 
 Given a string of characters with parentheses '(' and ')', find the minimum of
 parentheses required to remove in order to make the string balanced. Return the
@@ -33,13 +33,12 @@ Output: "Hello World!"
 Explanation: A string without any parenthesis is also a balanced string.
 
 Input: "))((("  
-Output: ""
+Output: ""  
 Explanation: An empty string is also a balanced string.
 
+## Solution
 
-**Solution**
-
-## Using Stack
+### Using Stack
 
 For an invalid string there could be three cases at each character:
 
@@ -86,7 +85,7 @@ string minRemoveToMakeValid(string s) {
 
 **Space Complexity**: $O(n)$, where $n$ is the length of the string, for the required stack.
 
-## Using Count Variables to Check Balance
+### Using Count Variables to Check Balance
 
 Two variables `openingCount` and `closingCount` are maintained to count the opening and closing parentheses. We can use different conditions to check if a parenthesis is a valid one or not.
 

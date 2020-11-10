@@ -12,18 +12,18 @@ tags:
 description: "Given the root to a binary search tree. Find the second largest node in the tree."
 ---
 
-**Problem**:
+## Problem
 
 You are given the root to a binary search tree. Find the *second* largest node in the tree and return it.
 For example for the given binary search tree, return 3.
 
 ![Binary Search Tree](/media/bst.jpg)
 
-**Solution**:
+## Solution
 
 It may be noted that in the following solutions, `NULL` is returned if there are less than 2 nodes in the BST.
 
-## Recursive solution:
+### Recursive Solution
 
 Inorder traversal traverses the BST in a sorted way. Thus, if we perform a
 reverse inorder traversal, we will get the largest node first and then second
@@ -61,7 +61,7 @@ maximum as the number of nodes for a skewed BST.
 - **Space Complexity**: $O(h)$ (where $h$ is the height of the BST) for the implicit
 stack required for recursion.
 
-## Iterative solution:
+### Iterative solution
 
 For iterative solution we have to consider few cases:
 

@@ -9,12 +9,12 @@ tags:
   - "cpp"
   - "medium"
   - "Matrix"
-description: "Given a positive integer n, generate a square matrix filled with elements from 1 to $n^2$ in spiral order."
+description: "Given a positive integer n, generate a square matrix filled with elements from 1 to n^2 in spiral order."
 ---
 
-**Problem**
+## Problem
 
-Given a positive integer n, generate a square matrix filled with elements from 1 to $n^2$ in spiral order.
+Given a positive integer $n$, generate a square matrix filled with elements from 1 to $n^2$ in spiral order.
 
 **Examples**
 
@@ -30,7 +30,9 @@ Output:
 
 10 9 8 7 
 
-**Solution**
+## Solution
+
+### Using 4 Variables for Traversal
 
 In this problem, we can traverse the matrix layer by layer. A single layer traversal consists of -
 
@@ -43,7 +45,7 @@ One such example is shown below:
 
 - traversing the first row in the layer
 
-**1 2 3 4**
+<u>**1**</u> <u>**2**</u> <u>**3**</u> <u>**4**</u>
 
 12 13 14 5
 
@@ -55,11 +57,11 @@ One such example is shown below:
 
 1 2 3 4
 
-12 13 14 **5**
+12 13 14 <u>**5**</u>
 
-11 16 15 **6**
+11 16 15 <u>**6**</u>
 
-10 9 8 **7**
+10 9 8 <u>**7**</u>
 
 - traversing the last row in the layer
 
@@ -69,17 +71,21 @@ One such example is shown below:
 
 11 16 15 6
 
-**10 9 8** 7 
+<u>**10**</u> <u>**9**</u> <u>**8**</u> 7 
 
 - traversing the first column in the layer
 
 1 2 3 4
 
-**12** 13 14 5
+<u>**12**</u> 13 14 5
 
-**11** 16 15 6
+<u>**11**</u> 16 15 6
 
 10 9 8 7 
+
+Thus, we can maintain 4 variables `rowStart`, `rowEnd`, `columnStart` and `columnEnd`.
+`rowStart` and `columnStart` are assigned to 0 and, `rowEnd` and `columnEnd` are
+assigned to `n - 1`. The variables are updated after each row and column traversal.
 
 ```cpp
 vector<vector<int>> generateMatrix(int n) {

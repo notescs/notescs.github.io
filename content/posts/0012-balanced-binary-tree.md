@@ -22,7 +22,7 @@ For example, the given binary tree is balanced:
      4  5
 ```
 
-Whereas, this is a unbalanced binary tree:
+Whereas, this is an unbalanced binary tree:
 ```text
     1
    / \
