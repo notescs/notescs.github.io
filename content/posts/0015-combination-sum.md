@@ -1,5 +1,5 @@
 ---
-title: Find Unique Combination of a List Whose Sum is Equal to a Target
+title: Find Combinations of a List Whose Sum is Equal to a Target
 date: "2020-12-19"
 template: "post"
 draft: false
@@ -9,14 +9,14 @@ tags:
   - "cpp"
   - "medium"
   - "backtracking"
-description: "Given a list of distinct integers, find all the possible combinations which sums up to a target"
+description: "Given a list of distinct integers, find all the possible combinations which sums up to a target."
 ---
 
 Given a list of distinct integers _nums_ and a target integer _target_, find all
 the possible combinations of _nums_ which sums up to _target_. You may use a number
 more than once. 
 
-## Approach
+## Approach: Backtracking
 
 ### Analysis
 
