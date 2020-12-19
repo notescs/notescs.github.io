@@ -14,7 +14,21 @@ description: "Given a list of distinct integers, find all the possible combinati
 
 Given a list of distinct integers _nums_ and a target integer _target_, find all
 the possible combinations of _nums_ which sums up to _target_. You may use a number
-more than once. 
+more than once.
+
+**Examples**:
+
+_Example 1_
+
+**Input**: nums = [1, 2, 3], target = 4  
+**Output**: [[1, 1, 1, 1], [1, 1, 2], [1, 3], [2, 2]]  
+**Explanation**: Sum of all the four combinations is 4. Note how 1 is used mutiple
+times in 1st and 2nd combination, and 2 is used multiple times in 4th combination.
+
+_Example 2_
+
+**Input**: nums = [2], target = 3  
+**Output**: []
 
 ## Approach: Backtracking
 
@@ -68,6 +82,7 @@ vector<vector<int>> combinationSum(vector<int>& nums, int target) {
 ### Complexity Analysis
 
 - **Time Complexity**: Computation of the exact time complexity is difficult.
-   However, we can give an upper bound of ${depth\;of\;recursion\;tree}^{no\;of\; maximum\;branchings} = O(N ^ {\lceil\frac{target}{min(nums)}\rceil})$, where $N$ is the number
-   of elements in _nums_.
+   However, we can give an upper bound of
+   ${depth\;of\;recursion\;tree}^{no\;of\; maximum\;branchings} = O(N ^ {\lceil\frac{target}{min(nums)}\rceil})$,
+   where $N$ is the number of elements in _nums_.
 - **Space Complexity**: $O(N)$ extra for the recursion stack.

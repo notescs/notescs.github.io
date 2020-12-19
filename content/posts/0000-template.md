@@ -13,6 +13,16 @@ tags:
 description: "template." # Change this
 ---
 
+<!-- Problem Statement -->
+
+**Examples**:
+
+_Example 1_
+
+**Input**:  
+**Output**:  
+**Explanation**:
+
 ## Approach
 
 ### Intuition / Analysis
