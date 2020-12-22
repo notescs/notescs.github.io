@@ -9,7 +9,7 @@ tags:
   - "Binary Search Tree"
   - "BST"
   - "easy"
-description: "Given the root to a binary search tree. Find the second largest node in the tree."
+description: "Given the root to a binary search tree, find the second largest node in the tree."
 ---
 
 ## Problem
