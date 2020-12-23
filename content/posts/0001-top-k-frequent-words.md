@@ -12,9 +12,80 @@ description: "How to use a Custom Comparator in C++ Priority Queue and Solving
 Top k Frequent Words"
 ---
 
-## Using Custom Comparator in Priority Queue
+Given a list of words, return the `k` most frequent elements. The answer should
+be sorted by frequency from highest to lowest. If two words have the same frequency,
+the word with the lower alphabetical order comes first. `k` is always valid,
+that is 1 <= `k` <= number of unique words.
 
-A priority queue is a queue where the elements stay in a certain sorted order. We can also provide a `Compare` type for custom ordering.
+For example, for the given list and k = 2,
+
+```shell
+["earth", "planet", "hello", "world", "hello", "world"]
+```
+
+Return `["hello", "world"]` as they have the highest frequency and sorted according
+to the alphabetical order.
+
+## Approach 1: Sorting
+
+### Intuition
+
+In a hashmap, keep the count of the words and then push the words along with their
+counts in a list and then sort the list. At last, return the first `k` elements.
+For the example above, the hashmap would be:
+
+```text
+earth: 1
+planet: 1
+hello: 2
+world: 2
+```
+
+After sorting (note the comparator function _comp_ below):
+
+```text
+hello: 2
+world: 2
+earth: 1
+planet: 1
+```
+
+### Implementation
+
+```cpp
+vector<string> topKFrequent(vector<string>& words, int k) {
+    unordered_map<string, int> frequency;
+    for (string &word: words) {
+        ++frequency[word];
+    }
+    // word, frequency
+    vector<pair<string, int>> wordFreq;
+    for (const auto &[word, freq]: frequency) {
+        wordFreq.push_back({word, freq});
+    }
+    auto comp = [](const pair<string, int> &a, const pair<string, int> &b) {
+        return a.second > b.second || (a.second == b.second && a.first < b.first);  
+    };
+    sort(wordFreq.begin(), wordFreq.end(), comp);
+    vector<string> ret;
+    for (int i = 0; i < k; ++i) {
+        ret.push_back(wordFreq[i].first);
+    }
+    return ret;
+}
+```
+
+### Complexity Analysis
+
+- **Time complexity**: $O(NlogN)$ due to sorting.
+- **Space complexity**: $O(N)$.
+
+## Approach 2: Priority Queue
+
+### Using Custom Comparator in Priority Queue in C++ - A Primer
+
+A priority queue is a queue where the elements stay in a certain sorted order. We
+can also provide a `Compare` type for custom ordering.
 
 _Defined in header `queue`_
 
@@ -26,11 +97,16 @@ template<
 > class priority_queue;
 ```
 
-The compare type should provide strict weak ordering, that is, it should return true if the first argument comes before the second argument.
+The compare type should provide strict weak ordering, that is, it should return
+true if the first argument comes before the second argument.
 
-Since the priority queue outputs the largest elements first, the elements that “come before” are actually output last. That is, the front of the queue contains the “last” element according to the weak ordering imposed by Compare.
+Since the priority queue outputs the largest elements first, the elements that
+“come before” are actually output last. That is, the front of the queue contains
+the “last” element according to the weak ordering imposed by Compare.
 
-By default in priority queue, the `compare` is `less` that is the largest element that appears at the top. Using `greater` we can make the smallest element appear at the top.
+By default in priority queue, the `compare` is `less` that is the largest element
+that appears at the top. Using `greater` we can make the smallest element appear
+at the top.
 
 ```cpp
 #include <bits/stdc++.h>
@@ -61,52 +137,14 @@ int main() {
 }
 ```
 
-## Top k Frequent Words
+### Intuition
 
-Given a list of words, return the `k` most frequent elements. The answer should be sorted by frequency from highest to lowest. If two words have the same frequency, then the word with the lower alphabetical order comes first. `k` is always valid, that is 1 <= `k` <= number of unique words.
+We have used sorting in approach - 1. Another efficient approach is using a
+priority queue. In the priority queue, we will always maintain the top k frequent
+words. Note the `comp` function below. If the priority queue size exceeds `k`, we
+will pop the topmost element (as it has the lowest count).
 
-For example, for the given list and k = 2,
-
-```shell
-["hello", "world", "hello", "earth", "planet", "world"]
-```
-
-Return `["hello", "world"]` as they have the highest frequency and sorted according to alphabetical order.
-
-### Approach 1: Sorting
-
-In a hashmap, keep the count of the words and then push the words along with their counts in a list and then sort the list. At last, return the first `k` elements.
-
-```cpp
-vector<string> topKFrequent(vector<string>& words, int k) {
-    unordered_map<string, int> frequency;
-    for (string &word: words) {
-        ++frequency[word];
-    }
-    // word, frequency
-    vector<pair<string, int>> wordFreq;
-    for (const auto &[word, freq]: frequency) {
-        wordFreq.push_back({word, freq});
-    }
-    auto comp = [](const pair<string, int> &a, const pair<string, int> &b) {
-        return a.second > b.second || (a.second == b.second && a.first < b.first);  
-    };
-    sort(wordFreq.begin(), wordFreq.end(), comp);
-    vector<string> ret;
-    for (int i = 0; i < k; ++i) {
-        ret.push_back(wordFreq[i].first);
-    }
-    return ret;
-}
-```
-
-Time complexity: `O(NlogN)` due to sorting
-
-Space complexity: `O(N)`
-
-### Approach 2: Priority Queue
-
-Another efficient approach is using a priority queue. In the priority queue, we will always maintain the top k frequent words. Note the `comp` function below. If the priority queue size exceeds `k`, we will pop the topmost element (as it has the lowest count).
+### Implementation
 
 ```cpp
 vector<string> topKFrequent(vector<string>& words, int k) {
@@ -136,10 +174,11 @@ vector<string> topKFrequent(vector<string>& words, int k) {
 }
 ```
 
-Time complexity `O(Nlogk)` as the priority queue size never exceeds `k`.
+### Complexity Analysis
 
-Space complexity `O(N)`.
+- **Time complexity**: $O(Nlogk)$ as the priority queue size never exceeds `k`.
+- **Space complexity**: $O(N)$.
 
-## Reference
+### Reference
 
 - [Cppreference article on priority\_queue](https://en.cppreference.com/w/cpp/container/priority_queue)
