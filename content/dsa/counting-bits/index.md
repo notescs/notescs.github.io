@@ -103,8 +103,8 @@ vector<int> countBits(int n) {
 
 ### Intuition
 
-The idea is to use $x&(x - 1)$ technique to clear the right most set bit.
-Thus, number of set bits of $x$ = number of set bits of $x&(x - 1)$ + 1.
+The idea is to use $x \& (x - 1)$ technique to clear the right most set bit.
+Thus, number of set bits of $x$ = number of set bits of $x \& (x - 1)$ + 1.
 
 ### Implementation
 

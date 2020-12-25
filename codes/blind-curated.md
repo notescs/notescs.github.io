@@ -52,14 +52,16 @@ Sl | Problem | Solution |
 
 ## Graph
 
-1. Clone Graph - https://leetcode.com/problems/clone-graph/
-1. Course Schedule - https://leetcode.com/problems/course-schedule/
-1. Pacific Atlantic Water Flow - https://leetcode.com/problems/pacific-atlantic-water-flow/
-1. Number of Islands - https://leetcode.com/problems/number-of-islands/
-1. Longest Consecutive Sequence - https://leetcode.com/problems/longest-consecutive-sequence/
-1. Alien Dictionary (Leetcode Premium) - https://leetcode.com/problems/alien-dictionary/
-1. Graph Valid Tree (Leetcode Premium) - https://leetcode.com/problems/graph-valid-tree/
-1. Number of Connected Components in an Undirected Graph (Leetcode Premium) - https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
+Sl | Problem | Solution |
+---|---------|----------|
+1 | [Clone Graph](https://leetcode.com/problems/clone-graph/) | |
+2 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | |
+3 | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | |
+4 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | |
+5 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | |
+6 | [Alien Dictionary (Leetcode Premium)](https://leetcode.com/problems/alien-dictionary/) | |
+7 | [Graph Valid Tree (Leetcode Premium)](https://leetcode.com/problems/graph-valid-tree/) | |
+8 | [Number of Connected Components in an Undirected Graph (Leetcode Premium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | |
 
 ---
 
@@ -101,35 +103,38 @@ Sl | Problem | Solution |
 
 ## String
 
-1. Longest Substring Without Repeating Characters - https://leetcode.com/problems/longest-substring-without-repeating-characters/
-1. Longest Repeating Character Replacement - https://leetcode.com/problems/longest-repeating-character-replacement/
-1. Minimum Window Substring - https://leetcode.com/problems/minimum-window-substring/
-1. Valid Anagram - https://leetcode.com/problems/valid-anagram/
-1. Group Anagrams - https://leetcode.com/problems/group-anagrams/
-1. Valid Parentheses - https://leetcode.com/problems/valid-parentheses/
-1. Valid Palindrome - https://leetcode.com/problems/valid-palindrome/
-1. Longest Palindromic Substring - https://leetcode.com/problems/longest-palindromic-substring/
-1. Palindromic Substrings - https://leetcode.com/problems/palindromic-substrings/
-1. Encode and Decode Strings (Leetcode Premium) - https://leetcode.com/problems/encode-and-decode-strings/
+Sl | Problem | Solution |
+---|---------|----------|
+1| [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | |
+2| [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | |
+3| [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | |
+4| [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | |
+5| [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | |
+6| [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | |
+7| [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | |
+8| [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | |
+9| [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | |
+10| [Encode and Decode Strings (Leetcode Premium)](https://leetcode.com/problems/encode-and-decode-strings/) | |
 
 ---
 
 ## Tree
-
-1. Maximum Depth of Binary Tree - https://leetcode.com/problems/maximum-depth-of-binary-tree/
-1. Same Tree - https://leetcode.com/problems/same-tree/
-1. Invert/Flip Binary Tree - https://leetcode.com/problems/invert-binary-tree/
-1. Binary Tree Maximum Path Sum - https://leetcode.com/problems/binary-tree-maximum-path-sum/
-1. Binary Tree Level Order Traversal - https://leetcode.com/problems/binary-tree-level-order-traversal/
-1. Serialize and Deserialize Binary Tree - https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
-1. Subtree of Another Tree - https://leetcode.com/problems/subtree-of-another-tree/
-1. Construct Binary Tree from Preorder and Inorder Traversal - https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
-1. Validate Binary Search Tree - https://leetcode.com/problems/validate-binary-search-tree/
-1. Kth Smallest Element in a BST - https://leetcode.com/problems/kth-smallest-element-in-a-bst/
-1. Lowest Common Ancestor of BST - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
-1. Implement Trie (Prefix Tree) - https://leetcode.com/problems/implement-trie-prefix-tree/
-1. Add and Search Word - https://leetcode.com/problems/add-and-search-word-data-structure-design/
-1. Word Search II - https://leetcode.com/problems/word-search-ii/
+Sl | Problem | Solution |
+---|---------|----------|
+1| [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | |
+2| [Same Tree](https://leetcode.com/problems/same-tree/) | |
+3| [Invert/Flip Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | |
+4| [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | |
+5| [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | |
+6| [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | |
+7| [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | |
+8| [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | |
+9| [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | |
+10| [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | |
+11| [Lowest Common Ancestor of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | |
+12| [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | |
+13| [Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/) | |
+14| [Word Search II](https://leetcode.com/problems/word-search-ii/) | |
 
 ---
 
