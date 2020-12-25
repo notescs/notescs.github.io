@@ -1,6 +1,6 @@
 # Solutions to Blind Curated 75
 
-Originally post [here](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU).
+Originally posted [here](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU).
 
 ## Array
 
@@ -8,7 +8,7 @@ Sl | Problem | Solution |
 ---|---------|----------|
 1 | [Two Sum](https://leetcode.com/problems/two-sum) | [Solution](https://notescs.gitlab.io/dsa/two-sum) |
 2 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | |
-3 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | |
+3 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [Solution](https://notescs.gitlab.io/dsa/comtains-duplicate) |
 4 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | |
 5 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | |
 6 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | |
@@ -16,15 +16,18 @@ Sl | Problem | Solution |
 8 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | |
 9 | [3Sum](https://leetcode.com/problems/3sum/) | |
 10 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | |
+
 ---
 
 ## Binary
 
-1. Sum of Two Integers - https://leetcode.com/problems/sum-of-two-integers/
-1. Number of 1 Bits - https://leetcode.com/problems/number-of-1-bits/
-1. Counting Bits - https://leetcode.com/problems/counting-bits/
-1. Missing Number - https://leetcode.com/problems/missing-number/
-1. Reverse Bits - https://leetcode.com/problems/reverse-bits/
+Sl | Problem | Solution |
+---|---------|----------|
+1 | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | |
+2 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [Solution](https://notescs.gitlab.io/posts/brian-kernighan-algorithm-count-set-bits) |
+3 | [Counting Bits](https://leetcode.com/problems/counting-bits/) | [Solution](https://notescs.gitlab.io/dsa/counting-bits) |
+4 | [Missing Number](https://leetcode.com/problems/missing-number/) | |
+5 | [Reverse Bits](https://leetcode.com/problems/reverse-bits/) | |
 
 ---
 
@@ -62,22 +65,26 @@ Sl | Problem | Solution |
 
 ## Interval
 
-1. Insert Interval - https://leetcode.com/problems/insert-interval/
-1. Merge Intervals - https://leetcode.com/problems/merge-intervals/
-1. Non-overlapping Intervals - https://leetcode.com/problems/non-overlapping-intervals/
-1. Meeting Rooms (Leetcode Premium) - https://leetcode.com/problems/meeting-rooms/
-1. Meeting Rooms II (Leetcode Premium) - https://leetcode.com/problems/meeting-rooms-ii/
+Sl | Problem | Solution |
+---|---------|----------|
+1 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | |
+2 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | |
+3 | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | |
+4 | [Meeting Rooms (Leetcode Premium)](https://leetcode.com/problems/meeting-rooms/) | |
+5 | [Meeting Rooms II (Leetcode Premium)](https://leetcode.com/problems/meeting-rooms-ii/) | |
 
 ---
 
 ## Linked List
 
-1. Reverse a Linked List - https://leetcode.com/problems/reverse-linked-list/
-1. Detect Cycle in a Linked List - https://leetcode.com/problems/linked-list-cycle/
-1. Merge Two Sorted Lists - https://leetcode.com/problems/merge-two-sorted-lists/
-1. Merge K Sorted Lists - https://leetcode.com/problems/merge-k-sorted-lists/
-1. Remove Nth Node From End Of List - https://leetcode.com/problems/remove-nth-node-from-end-of-list/
-1. Reorder List - https://leetcode.com/problems/reorder-list/
+Sl | Problem | Solution |
+---|---------|----------|
+1 | [Reverse a Linked List](https://leetcode.com/problems/reverse-linked-list/) | |
+2 | [Detect Cycle in a Linked List](https://leetcode.com/problems/linked-list-cycle/) | |
+3 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | |
+4 | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | |
+5 | [Remove Nth Node From End Of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | |
+6 | [Reorder List](https://leetcode.com/problems/reorder-list/) | |
 
 ---
 
@@ -85,8 +92,8 @@ Sl | Problem | Solution |
 
 Sl | Problem | Solution |
 ---|---------|----------|
-1 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [Solution](https://notescs.gitlab.io/dsa/spiral-matrix/) |
-2 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | |
+1 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) |  |
+2 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [Solution](https://notescs.gitlab.io/dsa/spiral-matrix/) |
 3 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | |
 4 | [Word Search](https://leetcode.com/problems/word-search/) | |
 

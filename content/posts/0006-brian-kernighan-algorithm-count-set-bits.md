@@ -14,16 +14,17 @@ description: "Count the number of set bits of an integer"
 
 Count the number of set bits of an integer.
 
-**Examples:**  
-Input: 31  
-Output: 5  
-Explanation: Binary representation of 31 is 11111
+_Example 1:_  
+**Input**: 31  
+**Output**: 5  
+**Explanation**: Binary representation of 31 is 11111
 
-Input: 42  
-Output: 3  
-Explanation: Binary representation of 42 is 101010
+_Example 2:_  
+**Input**: 42  
+**Output**: 3  
+**Explanation**: Binary representation of 42 is 101010
 
-## Approach-1: Naive
+## Approach 1: Naive
 
 Naive algorithm is to use the binary representation of the number and count the
 number of set bits.
@@ -66,13 +67,22 @@ if __name__ == '__main__':
     print('Number of set bits of', 42, 'is', count_set_bits(42))
 ```
 
-Time Complexity: $O(logN)$ where N is the number
-Space Complexity: $O(1)$ as we are not using any extra space
+> In python, we can also use the in-built function `bin`, which takes an integer
+> and returns it binary representation in string format. Thus, to calculate the
+> number of set bits we only have to count the number of `1` in `bin(n)`:
+> `bin(n).count('1')`.
 
-## Approach-2: Brian Kernighan Algorithm
+> In C++, we can use `__builtin_popcount` function: `__builtin_popcount(n)`. 
 
-`n = n & (n - 1)` clears the rightmost set bit. Let us take a look at some
-examples.
+### Complexity Analysis
+
+- **Time Complexity**: $O(log_2N)$ where $N$ is the number
+- **Space Complexity**: $O(1)$ as we are not using any extra space
+
+## Approach 2: Brian Kernighan Algorithm
+
+The idea is to use `n = n & (n - 1)` which clears the rightmost set bit. Let us
+take a look at some examples.
 
 ```text
 n           => 101010
@@ -141,5 +151,7 @@ if __name__ == '__main__':
     print('Number of set bits of', 42, 'is', count_set_bits(42))
 ```
 
-Time Complexity: $O(logN)$ when N has all of its bit set  
-Space Complexity: $O(1)$ as we are not using any extra space
+### Complexity Analysis
+
+- **Time Complexity**: $O(log_2N)$ at the worst case when $N$ has all of its bit set.
+- **Space Complexity**: $O(1)$ as we are not using any extra space.

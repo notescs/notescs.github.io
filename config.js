@@ -45,5 +45,6 @@ module.exports = {
       youtube: '',
       soundcloud: '',
     }
-  }
+  },
+  telegramSiteId: 'f7-pgMPd',
 };
