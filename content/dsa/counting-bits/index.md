@@ -70,7 +70,7 @@ This is true for all positions of the binary representation. So, we can generali
 - One bit contributed by the least significant bit (right most bit), which can be obtained
   by checking it the number is odd or even
 - A number has same number of set bits as its right shifted version (for example,
-  1110010 has same number of set bits as 11101). The right shifted version can be obtained
+  1110010 has same number of set bits as 111001). The right shifted version can be obtained
   by dividing the current number by 2 or using the bitwise operator `>>`.
 
 Considering these points we can build the bottom up dp table.
@@ -105,6 +105,7 @@ vector<int> countBits(int n) {
 
 The idea is to use $x \& (x - 1)$ technique to clear the right most set bit.
 Thus, number of set bits of $x$ = number of set bits of $x \& (x - 1)$ + 1.
+More details can be found in [this post](/posts/brian-kernighan-algorithm-count-set-bits).
 
 ### Implementation
 
