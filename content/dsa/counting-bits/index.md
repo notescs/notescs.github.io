@@ -6,7 +6,7 @@ category: "Data Structures & Algorithms"
 tags:
   - "cpp"
   - "medium"
-  - "binary"
+  - "bit-manipulation"
   - "dynamic-programming"
 description: "Given a number n, count the number of 1's in the binary representation
 of each number from 0 to n."
