@@ -7,7 +7,7 @@ slug: "dijkstra-algorithm"
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
-  - "graph"
+  - "Graph"
 description: "Snippet for Dijkstra’s Shortest Path Algorithm"
 ---
 

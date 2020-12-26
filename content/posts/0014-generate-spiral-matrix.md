@@ -7,7 +7,7 @@ slug: generate-spiral-matrix
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
-  - "medium"
+  - "Difficulty: Medium"
   - "Matrix"
 description: "Given a positive integer n, generate a square matrix filled with elements from 1 to n^2 in spiral order."
 ---

@@ -5,9 +5,9 @@ template: "post"
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
-  - "medium"
-  - "bit-manipulation"
-  - "dynamic-programming"
+  - "Difficulty: Medium"
+  - "Bit Manipulation"
+  - "Dynamic Programming"
 description: "Given a number n, count the number of 1's in the binary representation
 of each number from 0 to n."
 ---

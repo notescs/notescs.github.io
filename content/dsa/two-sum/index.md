@@ -5,9 +5,9 @@ template: "post"
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
-  - "easy"
-  - "hashing"
-  - "binary search"
+  - "Difficulty: Easy"
+  - "Hash Table"
+  - "Binary Search"
 description: "Given a list of integers, find all pairs with given sum."
 ---
 

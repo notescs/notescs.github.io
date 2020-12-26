@@ -7,8 +7,8 @@ slug: "combination-sum"
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
-  - "medium"
-  - "backtracking"
+  - "Difficulty: Medium"
+  - "Backtracking"
 description: "Given a list of distinct integers, find all the possible combinations which sums up to a target."
 ---
 

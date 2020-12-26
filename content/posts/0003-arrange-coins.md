@@ -8,9 +8,9 @@ category: "Data Structures & Algorithms"
 tags:
   - "cpp"
   - "python"
-  - "binary-search"
-  - "math"
-  - "easy"
+  - "Binary Search"
+  - "Math"
+  - "Difficulty: Easy"
 description: "Solve the problem using binary search and math"
 ---
 

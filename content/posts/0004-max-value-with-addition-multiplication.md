@@ -8,8 +8,8 @@ category: "Data Structures & Algorithms"
 tags:
   - "cpp"
   - "python"
-  - "dynamic-programming"
-  - "easy"
+  - "Dynamic Programming"
+  - "Difficulty: Easy"
 description: "Find the maximum value of an equation of ones with addition and multiplication operations"
 ---
 

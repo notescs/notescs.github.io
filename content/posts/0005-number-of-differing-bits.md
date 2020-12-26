@@ -8,9 +8,10 @@ category: "Data Structures & Algorithms"
 tags:
   - "cpp"
   - "python"
-  - "bits"
+  - "Bit Manipulation"
+  - "Difficulty: Easy"
 description: "Given two integers count the number of positions where there bit
-representation differ"
+representation differ."
 ---
 
 Given two integers count the number of positions where their bit

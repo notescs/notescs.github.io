@@ -8,8 +8,9 @@ category: "Data Structures & Algorithms"
 tags:
   - "cpp"
   - "python"
-  - "bit"
-description: "Count the number of set bits of an integer"
+  - "Bit Manipulation"
+  - "Difficulty: Easy"
+description: "Count the number of set bits of an integer."
 ---
 
 Count the number of set bits of an integer.

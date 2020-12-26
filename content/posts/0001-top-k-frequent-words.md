@@ -7,7 +7,9 @@ slug: "top-k-frequent-words"
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
-  - "priority queue"
+  - "Priority Queue"
+  - "Sort"
+  - "Difficulty: Medium"
 description: "How to use a Custom Comparator in C++ Priority Queue and Solving
 Top k Frequent Words"
 ---

@@ -7,7 +7,7 @@ slug: minimum-remove-to-make-valid-parentheses
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
-  - "medium"
+  - "Difficulty: Medium"
   - "Stack"
 description: "Given a string, remove minimum number of parentheses to make it
 balanced."

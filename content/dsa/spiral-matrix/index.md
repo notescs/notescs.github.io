@@ -5,7 +5,7 @@ template: "post"
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
-  - "medium"
+  - "Difficulty: Medium"
   - "Matrix"
 description: "Given a matrix, print all elements in spiral order."
 ---

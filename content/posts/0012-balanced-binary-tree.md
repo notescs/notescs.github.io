@@ -7,7 +7,7 @@ category: "Data Structures & Algorithms"
 tags:
   - "cpp"
   - "Binary Tree"
-  - "easy"
+  - "Difficulty: Easy"
 description: "Given root of a binary tree, check if it is balanced or not."
 ---
 

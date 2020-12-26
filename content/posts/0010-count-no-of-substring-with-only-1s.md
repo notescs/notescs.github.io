@@ -8,8 +8,8 @@ category: "Data Structures & Algorithms"
 tags:
   - "cpp"
   - "python"
-  - "sliding-window"
-  - "easy"
+  - "Sliding Window"
+  - "Difficulty: Easy"
 description: "Given a binary string, count no of substrings with only 1's."
 ---
 

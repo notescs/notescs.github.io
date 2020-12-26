@@ -5,9 +5,9 @@ template: "post"
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
-  - "easy"
-  - "sort"
-  - "hashtable"
+  - "Difficulty: Easy"
+  - "Sort"
+  - "Hash Table"
 description: "Given an array of integers, check if the array contains any duplicates." # Change this
 ---
 

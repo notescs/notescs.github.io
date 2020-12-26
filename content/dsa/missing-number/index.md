@@ -1,14 +1,15 @@
 ---
-title: Find One Missing Number in the Range
+title: Find One Missing Number in a Range
 date: "2020-12-26"
 template: "post"
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
-  - "easy"
-  - "sort"
-  - "bit-manipulation"
-  - "math"
+  - "Difficulty: Easy"
+  - "Sort"
+  - "Bit Manipulation"
+  - "Math"
+  - "Hash Table"
 description: "Given an array containing n distinct integers in the range [0, n],
 one number is missing from the array. Find the missing number."
 ---

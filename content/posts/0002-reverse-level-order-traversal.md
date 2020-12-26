@@ -7,10 +7,10 @@ slug: reverse-level-order-traversal
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
-  - "binary-tree"
-  - "dfs"
-  - "bfs"
-  - "easy"
+  - "Binary Tree"
+  - "DFS"
+  - "BFS"
+  - "Difficulty: Easy"
 description: "Given a binary tree, print its reverse level order traversal"
 ---
 
