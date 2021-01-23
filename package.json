@@ -1,7 +1,7 @@
 {
   "version": "3.0.3",
   "name": "cs-notes",
-  "description": "A minimal, lightweight and mobile-first starter for creating blazing-fast static blogs",
+  "description": "CS Notes",
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
@@ -18,7 +18,7 @@
   },
   "repository": "https://github.com/notescs/notescs.github.io",
   "author": "Ayan Banerjee <ayanbn7@gmail.com>",
-  "license": "MIT",
+  "license": "Copyright, All rights reserved",
   "keywords": [
     "gatsby",
     "graphql",
