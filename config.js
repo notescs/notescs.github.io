@@ -10,7 +10,6 @@ module.exports = {
   postsPerPage: 8,
   googleAnalyticsId: 'UA-121107357-1',
   useKatex: true,
-  telegramSiteId: 'f7-pgMPd',
   menu: [
     {
       label: 'Articles',

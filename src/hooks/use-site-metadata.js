@@ -38,7 +38,6 @@ const useSiteMetadata = () => {
             subtitle
             copyright
             disqusShortname
-            telegramSiteId
           }
         }
       }

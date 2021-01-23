@@ -13,7 +13,6 @@ module.exports = {
     disqusShortname: siteConfig.disqusShortname,
     menu: siteConfig.menu,
     author: siteConfig.author,
-    telegramSiteId: siteConfig.telegramSiteId,
   },
   plugins: [
     {
