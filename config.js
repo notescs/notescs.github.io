@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  url: 'https://notescs.gitlab.io',
+  url: 'https://notescs.github.io',
   pathPrefix: '/',
   title: 'CS Notes',
   subtitle: '',
