@@ -83,4 +83,4 @@ int getSum(int a, int b) {
 
 ### Credits
 
-The half adder image is taken from [WikiMedia Commons](https://en.wikipedia.org/wiki/File:Half_Adder.svg) (_Author: inductiveload, available in [public domain](https://en.wikipedia.org/wiki/en:Public_domain)_).
+The half adder image is taken from [WikiMedia Commons](https://en.wikipedia.org/wiki/File:Half_Adder.svg) (Author: inductiveload, available in [public domain](https://en.wikipedia.org/wiki/en:Public_domain)).

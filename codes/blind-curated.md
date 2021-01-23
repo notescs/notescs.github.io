@@ -23,7 +23,7 @@ Sl | Problem | Solution |
 
 Sl | Problem | Solution |
 ---|---------|----------|
-1 | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | |
+1 | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | [Solution](https://notescs.github.io/dsa/sum-of-two-integers/) |
 2 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [Solution](https://notescs.gitlab.io/posts/brian-kernighan-algorithm-count-set-bits) |
 3 | [Counting Bits](https://leetcode.com/problems/counting-bits/) | [Solution](https://notescs.gitlab.io/dsa/counting-bits) |
 4 | [Missing Number](https://leetcode.com/problems/missing-number/) | [Solution](https://notescs.gitlab.io/dsa/missing-number) |
