@@ -8,8 +8,8 @@ category: "Data Structures & Algorithms"
 tags:
   - "cpp"
   - "python"
-  - "easy" # Change this
-  - "topic" # Change this
+  - "Difficulty: Easy" # Change this
+  - "Dynamic Programming" # Change this
 description: "template." # Change this
 ---
 
