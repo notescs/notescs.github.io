@@ -106,7 +106,7 @@ Since the priority queue outputs the largest elements first, the elements that
 “come before” are actually output last. That is, the front of the queue contains
 the “last” element according to the weak ordering imposed by Compare.
 
-By default in priority queue, the `compare` is `less` that is the largest element
+By default, in priority queue, the `compare` is `less` that is the largest element
 that appears at the top. Using `greater` we can make the smallest element appear
 at the top.
 
