@@ -2,7 +2,7 @@
 title: Maximize Sum of Subsequence with Condition
 date: "2021-02-05"
 template: "post"
-draft: true # Change this
+draft: false
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
@@ -15,9 +15,9 @@ other element."
 
 <!-- Problem Statement -->
 
-Given an array of integers, maximize sub of subsequence such that
-the sum of any two elements in the subsequence is greater than or equal to any
-other element. Return the sum of the subsequence.
+Given an array of integers, maximize sub of subsequence such that the sum of any
+two elements in the subsequence is greater than or equal to any other element.
+Return the sum of the subsequence.
 
 _Example 1_
 
