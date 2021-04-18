@@ -100,4 +100,4 @@ int main() {
 
 - **Time Complexity**: $O(NlogN)$ for sorting and then $(N - 1)$ binary search each
   having time complexity $O(logN)$ making overall time complexity $O(NlogN)$.
-- **Space Complexity**: $O(N)$ extra for the prefix array.
+- **Space Complexity**: $O(N)$ extra for the prefix sum array.

@@ -1,6 +1,6 @@
 ---
 title: Template # Change this
-date: "2020-06-26" # Change this
+date: "2021-01-26" # Change this
 template: "post"
 draft: true # Change this
 slug: "template" # Change this
