@@ -35,7 +35,8 @@ const Layout = ({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={metaImageUrl} />
-        <script data-ad-client="ca-pub-3746822438218512" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {/* <script data-ad-client="ca-pub-3746822438218512" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> */}
+        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ceb5d8a91d4c4394847922f7161a3524"}'></script>
       </Helmet>
       {children}
     </div>
