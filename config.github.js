@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://csposts.com',
   pathPrefix: '/',
-  title: 'CS Notes',
+  title: 'CS Posts',
   subtitle: '',
   copyright: '© All rights reserved.',
   disqusShortname: '',
@@ -25,18 +25,18 @@ module.exports = {
     }
   ],
   author: {
-    name: 'CS Notes',
+    name: 'CS Posts',
     photo: '/photo.jpg',
     bio: '',
     contacts: {
-      email: '',
+      email: 'ayanb7@yahoo.com',
       facebook: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
+      telegram: 'ayanbn7',
+      twitter: 'ayanbn7',
+      github: 'ayan-b',
       rss: '',
       vkontakte: '',
-      linkedin: '#',
+      linkedin: 'ayanb',
       instagram: '#',
       line: '',
       gitlab: '',

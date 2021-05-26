@@ -59,7 +59,7 @@ jobs:
       #     CI: true
 
       - run: |
-          mv config.js.github config.js
+          mv config.github.js config.js
           yarn build --log-pages --prefix-paths
         name: Build
         env:

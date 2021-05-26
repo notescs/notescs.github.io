@@ -8,7 +8,7 @@ tags:
   - "Difficulty: Easy"
   - "Sort"
   - "Hash Table"
-description: "Given an array of integers, check if the array contains any duplicates." # Change this
+description: "Given an array of integers, check if the array contains any duplicates."
 ---
 
 <!-- Problem Statement -->
@@ -59,7 +59,7 @@ bool containsDuplicate(vector<int>& nums) {
 ### Complexity Analysis
 
 - **Time Complexity**: At the worst case when there are no duplicates, number of
-  comparisions = $\frac{N * (N - 1)}{2}$ making time complexity $O(N^2)$, where
+  comparisons = $\frac{N * (N - 1)}{2}$ making time complexity $O(N^2)$, where
   $N$ = number of elements in the array.
 - **Space Complexity**: $O(1)$, only constant space is used.
 
