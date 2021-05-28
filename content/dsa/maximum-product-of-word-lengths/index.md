@@ -15,14 +15,21 @@ of lengths where two words do not share any common letters."
 <!-- Problem Statement -->
 
 Given an array of strings `words`, return the maximum value of the product of lengths
-where two words do not share any common letters.
+where two words do not share any common letters. The strings only contain lowercase
+letters.
 
 _Example 1_
 
-**Input**:  words = ["a", "bcd", "foo", "ba"]
-**Output**:  9
+**Input**:  words = ["a", "bcd", "foo", "ba"]  
+**Output**:  9  
 **Explanation**: Maximum possible product of length of words which do not share
 any common letter = length("bcd") * length("foo") = 9
+
+_Example 2_
+
+**Input**: ["a","ab","abc","d","cd","bcd","abcd"]  
+**Output**: 4  
+**Explanation**: The two words can be "ab", "cd".
 
 ## Approach: Bit Manipulation
 
@@ -31,8 +38,8 @@ limited to only 26, datatype of `int` can be used for masking.
 
 ### Intuition
 
-Let us consider only 4 characters in our alphabet: a, b, c and d. We set the unique
-character's bit from left. Note how the masking is done in the following example:
+Let us consider only 4 characters in our alphabet: a, b, c and d. We set all the unique
+characters' bit from left. Note how the masking is done in the following example:
 
 Word | d | c | b | a | Masked Value (in binary) |
 -----|---|---|---|---|--------------------------|
