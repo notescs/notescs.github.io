@@ -42,7 +42,7 @@ abcd | 1 | 1 | 1 | 1 | 1111 |
 bbbc | 0 | 1 | 1 | 0 | 0110 |
 
 Now, if we perform `AND (&)` operation and obtain 0, the words do not share common
-characters.
+characters (see the example of "aaaa" and "bbbc" above).
 
 ### Implementation
 
