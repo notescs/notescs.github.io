@@ -33,7 +33,7 @@ module.exports = {
       facebook: '#',
       telegram: 'ayanbn7',
       twitter: 'ayanbn7',
-      github: 'ayan-b',
+      github: 'notescs/notescs.github.io',
       rss: '',
       vkontakte: '',
       linkedin: 'ayanb',

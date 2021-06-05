@@ -2,7 +2,6 @@
 title: Minimum Amount of Coins Required to Make up an Amount # Change this
 date: "2021-05-25"
 template: "post"
-slug: "coin-change"
 category: "Data Structures & Algorithms"
 tags:
   - "cpp"
