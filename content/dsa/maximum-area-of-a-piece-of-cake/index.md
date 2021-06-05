@@ -77,7 +77,7 @@ In C++:
 ```cpp
 int getMaxGap(vector<int> &cuts, int length) {
     sort(cuts.begin(), cuts.end());
-    // gap bwtween start (0) and first cut
+    // gap between start (0) and first cut
     int maxGap = cuts[0];
     for (int i = 1; i < (int)cuts.size(); ++i) {
         // gap between subsequent cuts

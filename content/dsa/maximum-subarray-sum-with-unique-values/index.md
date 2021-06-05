@@ -38,7 +38,7 @@ _Example 2_
 
 ## Approach: Two Pointers
 
-Like many subarray related problems, this can be also be solved using two pointers.
+Like many subarray related problems, this can also be solved using two pointers.
 
 ### Intuition
 
@@ -46,7 +46,7 @@ Let's keep two pointers (`left` and `right`) both pointing to the start of the a
 We will also be maintaining a hashmap to keep track of the unique elements considered
 in our solution.
 
-As we iterate our sliding window formed by the pointers `left` and `right`, we will
+As we iterate through our sliding window formed by the pointers `left` and `right`, we will
 increment the right pointer if it is not already in the solution subarray (sliding
 window). If it is present in the sliding window, we will increment the `left` pointer
 as long as `nums[right]` is present. The check of presence is computed using a
