@@ -32,6 +32,7 @@
 <url> <loc>https://csposts.com/dsa/maximum-product-of-word-lengths/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://csposts.com/dsa/maximum-subarray-sum-with-unique-values/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://csposts.com/dsa/open-the-lock/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://csposts.com/dsa/word-ladder/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://csposts.com/tag/bfs</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://csposts.com/tag/bst</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://csposts.com/tag/backtracking</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -39,6 +40,7 @@
 <url> <loc>https://csposts.com/tag/binary-search-tree</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://csposts.com/tag/binary-tree</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://csposts.com/tag/bit-manipulation</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://csposts.com/tag/breadth-first-search</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://csposts.com/tag/dfs</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://csposts.com/tag/difficulty-easy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://csposts.com/tag/difficulty-easy/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
