@@ -22,7 +22,7 @@ description: "template." # Change this
 
 ## Approach
 
-### Analysis
+### Idea
 
 ### Implementation
 

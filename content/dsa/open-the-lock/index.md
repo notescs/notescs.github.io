@@ -96,7 +96,8 @@ int openLock(vector<string>& deadends, string target) {
                 // edge: next of '9' is '0'
                 nextNeighbor[i] = cur[i] == '9' ? '0' : cur[i] + 1;
                 for (auto neighbor: {prevNeighbor, nextNeighbor}) {
-                    // pre-emptively check, so that we don't have to explore the other neighbors
+                    // pre-emptively check, so that we don't have to explore
+                    // the other neighbors
                     if (neighbor == target) return 1 + level;
                     if (!visited.count(neighbor)) {
                         q.push(neighbor);
