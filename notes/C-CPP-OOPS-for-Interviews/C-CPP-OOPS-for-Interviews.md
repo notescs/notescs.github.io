@@ -1119,7 +1119,7 @@ In C++, delete operator should only be used either for the pointers pointing to 
 
 # C Storage Layout
 
-![alt_text](memory-layout-c.jpg)
+![alt_text](memory-layout-C.jpg)
 
 <small>[Source](https://media.geeksforgeeks.org/wp-content/uploads/memoryLayoutC.jpg)</small>
 
