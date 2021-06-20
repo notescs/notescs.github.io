@@ -6,22 +6,23 @@ C, C++ &amp; OOPS for Interviews
 - [Smart Pointers](#smart-pointers)
 - [Name Mangling and Externs](#name-mangling-and-externs)
 - [Virtual Functions](#virtual-functions)
-  - [Pure Virtual Functions](#pure-virtual-functions)
-  - [Virtual Destructors](#virtual-destructors)
-  - [Virtual Table](#virtual-table)
+	- [Pure Virtual Functions](#pure-virtual-functions)
+	- [Virtual Destructors](#virtual-destructors)
+	- [Virtual Table](#virtual-table)
 - [Virtual Base Class](#virtual-base-class)
 - [Friend Functions](#friend-functions)
-  - [Friends as Bridges](#friends-as-bridges)
+	- [Friends as Bridges](#friends-as-bridges)
 - [Friend Classes](#friend-classes)
-  - [Private constructors using Friend Classes](#private-constructors-using-friend-classes)
+	- [Private constructors using Friend Classes](#private-constructors-using-friend-classes)
 - [Static Functions](#static-functions)
 - [Copy Constructors](#copy-constructors)
 - [Shallow Copy and Deep Copy](#shallow-copy-and-deep-copy)
 - [Operator Overloading](#operator-overloading)
+	- [Arithmetic Operators](#arithmetic-operators)
 - [Namespace](#namespace)
 - [Templates](#templates)
-  - [Function Templates](#function-templates)
-  - [Class Templates](#class-templates)
+	- [Function Templates](#function-templates)
+	- [Class Templates](#class-templates)
 - [Exceptions](#exceptions)
 - [free vs delete()](#free-vs-delete)
 - [C Storage Classes](#c-storage-classes)
@@ -47,9 +48,9 @@ Polymorphism is the ability to present the same interface for differing underlyi
 
 # Smart Pointers
 
-Pointers with * and -> overloaded. Using [smart pointers](http://en.wikipedia.org/wiki/Smart_pointer), we can make pointers to work in way that we don’t need to explicitly call delete.[ Smart pointer](http://en.wikipedia.org/wiki/Smart_pointer) is a wrapper class over a pointer with operator like * and -> overloaded. The objects of smart pointer class look like pointer, but can do many things that a normal pointer can’t like automatic destruction (yes, we don’t have to explicitly use delete), reference counting and more.
+Pointers with `*` and `->` overloaded. Using [smart pointers](http://en.wikipedia.org/wiki/Smart_pointer), we can make pointers to work in way that we don’t need to explicitly call delete. [Smart pointer](http://en.wikipedia.org/wiki/Smart_pointer) is a wrapper class over a pointer with operator like `*` and `->` overloaded. The objects of smart pointer class look like pointer, but can do many things that a normal pointer can’t like automatic destruction (yes, we don’t have to explicitly use delete), reference counting and more.
 
-The idea is to make a class with a pointer, destructor and overloaded operators like * and ->. Since destructor is automatically called when an object goes out of scope, the dynamically allocated memory would automatically deleted (or reference count can be decremented). Consider the following simple smartPtr class.
+The idea is to make a class with a pointer, destructor and overloaded operators like `* `and `->`. Since *destructor is automatically called when an object goes out of scope*, the dynamically allocated memory would automatically be deleted (or reference count can be decremented). Consider the following simple `smartPtr` class.
 
 
 ```cpp
@@ -62,13 +63,13 @@ public:
     explicit SmartPtr(int *p = NULL) { ptr = p; }
 
     ~SmartPtr() {
-   	    delete(ptr);
+		delete(ptr);
     }
 
-	  // Overloading dereferencing operator
+	// Overloading dereferencing operator
     int &operator *() {
-  	    return *ptr;
-	  }
+		return *ptr;
+	}
 };
 
 int main() {
@@ -80,7 +81,7 @@ int main() {
 ```
 
 
-Examples: unique_ptr, shared_ptr
+Examples: `unique_ptr`, `shared_ptr`
 
 # Name Mangling and Externs
 
@@ -108,11 +109,11 @@ undefined reference to `printf(char const*, ...)'
 ```
 
 
-Use extern C for C codes.
+Use `extern C` for C codes.
 
 ```cpp
 extern "C" {
-      int printf(char *format, ...);
+	int printf(char *format, ...);
 }
 int main() {
     printf("Hello, world!");
@@ -122,7 +123,7 @@ int main() {
 
 # Virtual Functions
 
-_Constructor can never be virtual function._
+_Constructor can never be a virtual function._
 
 [https://ideone.com/cmt0E3](https://ideone.com/cmt0E3) 
 
@@ -175,7 +176,7 @@ Base
 
 This is known as **Static/Early Binding**. Depends on the _type_ of ptr, not _content_.
 
-Compile-time/Static polymorphism => Function overloading (this one), Operator overloading
+Compile-time/Static polymorphism → Function overloading (this one), Operator overloading
 
 [https://ideone.com/8eDA0X](https://ideone.com/8eDA0X)
 
@@ -187,14 +188,16 @@ using namespace std;
 class Base {
 public:
     virtual void show() {
-   	 cout << "Base\n";
+		cout << "Base\n";
     }
 };
 
 class Derv1: public Base {
 public:
+	// not necessary to add `virtual` keyword, as the function of the base is
+	// virtual
     void show() {
-   	 cout << "Derv1\n";
+		cout << "Derv1\n";
     }
 };
 
@@ -202,7 +205,7 @@ public:
 class Derv2: public Base {
 public:
     void show() {
-   	 cout << "Derv2\n";
+		cout << "Derv2\n";
     }
 };
 
@@ -226,15 +229,21 @@ Derv1
 Derv2
 ```
 
-Prepend `virtual` keyword to the function definition => virtual function.
+Prepend `virtual` keyword to the function definition → virtual function.
 
-The rule is that the compiler selects the function based on the contents of `ptr`, not type. Type is used in non-virtual case.
+The rule is that the compiler selects the function based on the contents of `ptr`, 
+not type. Type is used in *non-virtual* case.
 
-Here the compiler does not know what class the contents of `ptr` may contain. It may content address of an object of the `Derv1` class or of the `Derv2` class. At runtime, this is decided on the basis of content. When it is known what class is pointed to by `ptr`, the appropriate version is called. This is known as **Late Binding**.
+Here the compiler does not know what class the contents of `ptr` may contain. It 
+may content address of an object of the `Derv1` class or of the `Derv2` class. At 
+runtime, this is decided on the basis of content. When it is known what class is 
+pointed to by `ptr`, the appropriate version is called. This is known as **Late 
+Binding**.
 
 ## Pure Virtual Functions
 
-Another usage for virtual functions is when we cannot or we don’t want to implement a method for parent class.
+Another usage for virtual functions is when we cannot, or we don’t want to
+implement a method for parent class.
 
 
 ```cpp
@@ -249,7 +258,7 @@ public:
 class Derv1: public Base {
 public:
     void show() {
-   	 cout << "Derv1\n";
+		cout << "Derv1\n";
     }
 };
 
@@ -257,7 +266,7 @@ public:
 class Derv2: public Base {
 public:
     void show() {
-   	 cout << "Derv2\n";
+		cout << "Derv2\n";
     }
 };
 
@@ -281,7 +290,13 @@ Derv1
 Derv2
 ```
 
-The class Base is now an abstract class and cannot be instantiated. Any class with a pure virtual function is an abstract class. Once you’ve placed a pure virtual function in the base class, you must override it in all the derived classes from which you want to instantiate objects. **If a class doesn’t override the pure virtual function, it becomes an abstract class itself**, and you can’t instantiate objects from it(although you might from classes derived from it). For consistency, you may want to make all the virtual functions in the base class pure.
+The class Base is now an abstract class and cannot be instantiated. Any class with 
+a pure virtual function is an abstract class. Once you’ve placed a pure virtual 
+function in the base class, you must override it in all the derived classes from 
+which you want to instantiate objects. **If a class doesn’t override the pure 
+virtual function, it becomes an abstract class itself**, and you can’t instantiate 
+objects from it (although you might from classes derived from it). For consistency, 
+you may want to make all the virtual functions in the base class pure.
 
 **Abstract classes** are also called **interfaces** in C++.
 
@@ -345,17 +360,17 @@ public:
     	cout << "Base\n";
 	}
 	virtual ~Base() {
-   	 cout << "Base destroyed\n";
+		cout << "Base destroyed\n";
 	}
 };
 
 class Derv: public Base {
 public:
 	void show() {
-    	cout << "Derv\n";
+		cout << "Derv\n";
 	}
 	~Derv() {
-   	 cout << "Derv destroyed\n";
+		cout << "Derv destroyed\n";
 	}
 };
 
@@ -365,22 +380,24 @@ int main() {
 }
 ```
 
-
 Deletes both Base and Derv. If not virtual, only “Base” will be deleted.
 
 ## Virtual Table
 
 Source: https://www.learncpp.com/cpp-tutorial/125-the-virtual-table/ 
 
-To implement virtual functions, C++ uses a special form of late binding known as the virtual table.
-The virtual table is a lookup table of functions used to resolve function calls in a dynamic/late binding manner.
-The virtual table sometimes goes by other names, such as “vtable”, “virtual function table”, “virtual method table”,
+To implement virtual functions, C++ uses a special form of late binding known as 
+the virtual table. The virtual table is a lookup table of functions used to resolve 
+function calls in a dynamic/late binding manner. The virtual table sometimes goes 
+by other names, such as “vtable”, “virtual function table”, “virtual method table”,
 or “dispatch table”.
 
-First, every class that uses virtual functions (or is derived from a class that uses virtual functions) is given its
-own virtual table. This table is simply a static array that the compiler sets up at compile time. A virtual table
-contains one entry for each virtual function that can be called by objects of the class. Each entry in this table
-is simply a function pointer that points to the most-derived function accessible by that class.
+First, every class that uses virtual functions (or is derived from a class that
+uses virtual functions) is given its own virtual table. This table is simply a 
+static array that the compiler sets up at compile time. A virtual table
+contains one entry for each virtual function that can be called by objects of the
+class. Each entry in this table is simply a function pointer that points to the 
+most-derived function accessible by that class.
 
 Second, the compiler also adds a hidden pointer to the base class, which we will call *__vptr.
 *__vptr is set (automatically) when a class instance is created so that it points to the virtual
@@ -430,10 +447,10 @@ public:
 };
 ```
 
-When a class object is created, *__vptr is set to point to the virtual table for that class.
-For example, when a object of type Base is created, *__vptr is set to point to the virtual table
-for Base. When objects of type D1 or D2 are constructed, *__vptr is set to point to the virtual
-table for D1 or D2 respectively.
+When a class object is created, `*__vptr` is set to point to the virtual table for
+that class. For example, when an object of type Base is created, `*__vptr` is set to 
+point to the virtual table for Base. When objects of type D1 or D2 are constructed,
+`*__vptr` is set to point to the virtual table for D1 or D2 respectively.
 
 Now, let’s talk about how these virtual tables are filled out. Because there are only two virtual
 functions here, each virtual table will have two entries (one for function1(), and one for function2()).
@@ -508,7 +525,7 @@ int main() {
 ```
 
 
-The use of the keyword virtual in these two classes causes them to share a single common subobject of their base class Parent. Since there is only one copy of basedata,there is no ambiguity when it is referred to in Grandchild.The need for virtual base classes may indicate a conceptual problem with your use of multiple inheritance, so they should be used with caution.
+The use of the keyword virtual in these two classes causes them to share a single common subobject of their base class Parent. Since there is only one copy of basedata, there is no ambiguity when it is referred to in Grandchild. The need for virtual base classes may indicate a conceptual problem with your use of multiple inheritance, so they should be used with caution.
 
 # Friend Functions
 
@@ -692,6 +709,8 @@ Destroying is number 1
 
 Note the order of destructions. Clearly shows the LIFO stack underneath.
 
+**Can Static Functions be Virtual?** No.
+
 # Copy Constructors
 
 ```cpp
@@ -741,12 +760,9 @@ C++ provides default copy constructors to all classes.
 
 Default copy constructor only does shallow copy, i.e., a member by member copy.
 
-![deep-copy-shallow-copy](https://i.stack.imgur.com/AWKJa.jpg)
-
-
+![deep-copy-shallow-copy](shallow-copy-deep-copy.jpg)
 
 # Operator Overloading
-
 
 ```cpp
 # include <iostream>
@@ -758,10 +774,10 @@ private:
 public:
 	Counter(): count(0) {}
 	unsigned int getCount() {
-    	return count;
+		return count;
 	}
 	void operator ++ () {
-    	++count;
+		++count;
 	}
 };
 
@@ -776,14 +792,15 @@ int main() {
 ```
 
 
-Note the return value of the operator method. If we try c4 = ++ c1, compiler will complain since the operator is not returning anything. In order to do that:
+Note the return value of the operator method. If we try c4 = ++ c1, compiler will
+complain since the operator is not returning anything. In order to do that:
 
 
 ```cpp
-Counter operator ++ () { //increment count
-    ++count; //increment count
-    Counter temp; //make a temporary Counter
-    temp.count = count;   //give it same value as this obj
+Counter operator ++ () {  // increment count
+    ++count;  //increment count
+    Counter temp;  // make a temporary Counter
+    temp.count = count;   // give it same value as this obj
     return temp;          //return the copy
 }
 ```
@@ -798,7 +815,7 @@ Counter operator ++ (int) {
 }
 ```
 
-Arithmetic Operators
+## Arithmetic Operators
 
 
 ```cpp
@@ -874,7 +891,8 @@ The namespace name is uniquely generated by the compiler.
 
 # Templates
 
-Templates make it possible to handle many different data types by a single function or class.
+Templates make it possible to handle many different data types by a single
+function or class.
 
 ## Function Templates
 
@@ -908,11 +926,11 @@ using namespace std;
 template <class atype, class btype>
 atype find_ (vector<atype> a, btype n, atype k) {
 	for (btype i = 0; i < n; ++i) {
-    	    if (a[i] == k) {
-        	    return i;
-    	    }
+    	if (a[i] == k) {
+        	return i;
+    	}
 	}
-      return static_cast<atype>(-1);
+    return static_cast<atype>(-1);
 	// return -1;
 }
 
@@ -936,13 +954,13 @@ private:
 	int top;
 public:
 	Stack() {
-    	    top = -1;
+		top = -1;
 	}
 	void push(Type var) {
-    	    st[++top] = var;
+    	st[++top] = var;
 	}
 	Type pop() {
-    	    return st[top--];
+    	return st[top--];
 	}
 };
 
@@ -1101,10 +1119,9 @@ In C++, delete operator should only be used either for the pointers pointing to 
 
 # C Storage Layout
 
+![alt_text](memory-layout-c.jpg)
 
-
-![alt_text](https://media.geeksforgeeks.org/wp-content/uploads/memoryLayoutC.jpg)
-
+<small>[Source](https://media.geeksforgeeks.org/wp-content/uploads/memoryLayoutC.jpg)</small>
 
 **Heap**: dynamic memory allocation
 
@@ -1114,8 +1131,11 @@ In C++, delete operator should only be used either for the pointers pointing to 
 
 **Initialized data (ds)**: DS = **D**ata **S**egment; explicitly initialized global and static variables
 
-**Text**: binary of the compiled program, read-only; sharable so that only a single copy needs to be in memory for frequently executed programs such as text editors etc
+**Text**: binary of the compiled program, read-only; sharable so that only a
+single copy needs to be in memory for frequently executed programs such as text editors etc
 
 # Credits
 
-Portions of this note is taken from geeksforgeeks, Leetcode, learncpp website and, Cracking the Coding Interview and Object-Oriented Programming in C++, Fourth Edition book.
+Portions of this note is taken from geeksforgeeks, LeetCode, learncpp website,
+Cracking the Coding Interview, and Object-Oriented Programming in C++, Fourth
+Edition book.
