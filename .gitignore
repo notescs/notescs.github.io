@@ -12,3 +12,5 @@ gatsby-starter-lumen.iml
 TODO.md
 codes/blind-curated.md
 .vscode/
+
+.env

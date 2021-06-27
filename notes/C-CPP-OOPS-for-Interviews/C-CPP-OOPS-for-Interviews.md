@@ -35,22 +35,52 @@ C, C++ &amp; OOPS for Interviews
 
 
 - **Abstraction**
-We try to obtain abstract view, model or structure of real life problem, and reduce its unnecessary details. With definition of properties of problems, including the data which are affected and the operations which are identified, the model abstracted from problems can be a standard solution to this type of problems. It is an efficient way since there are nebulous real-life problems that have similar properties.
+We try to obtain abstract view, model or structure of real life problem, and
+reduce its unnecessary details. With definition of properties of problems,
+including the data which are affected and the operations which are identified,
+the model abstracted from problems can be a standard solution to this type of
+problems. It is an efficient way since there are nebulous real-life problems that
+have similar properties.
 
 - **Encapsulation**
-Encapsulation is the process of combining data and functions into a single unit called class. In Encapsulation, the data is not accessed directly; it is accessed through the functions present inside the class. In simpler words, attributes of the class are kept private and public getter and setter methods are provided to manipulate these attributes. Thus, encapsulation makes the concept of data hiding possible. (Data hiding: a language feature to restrict access to members of an object, reducing the negative effect due to dependencies. e.g. "protected", "private" feature in C++).
+Encapsulation is the process of combining data and functions into a single unit
+called class. In Encapsulation, the data is not accessed directly; it is accessed
+through the functions present inside the class. In simpler words, attributes of
+the class are kept private and public getter and setter methods are provided to
+manipulate these attributes. Thus, encapsulation makes the concept of data hiding
+possible. (Data hiding: a language feature to restrict access to members of an
+object, reducing the negative effect due to dependencies. e.g. "protected",
+"private" feature in C++).
 
 - **Inheritance**
-The idea of inheritance is simple, a class is based on another class and uses data and implementation of the other class. And the purpose of inheritance is Code Reuse.
+The idea of inheritance is simple, a class is based on another class and uses
+data and implementation of the other class. And the purpose of inheritance is
+Code Reuse.
 
 - **Polymorphism**
-Polymorphism is the ability to present the same interface for differing underlying forms (data types). With polymorphism, each of these classes will have different underlying data. A point shape needs only two coordinates (assuming it's in a two-dimensional space of course). A circle needs a center and radius. A square or rectangle needs two coordinates for the top left and bottom right corners and (possibly) a rotation. An irregular polygon needs a series of lines.
+Polymorphism is the ability to present the same interface for differing underlying
+forms (data types). With polymorphism, each of these classes will have different
+underlying data. A point shape needs only two coordinates (assuming it's in a
+two-dimensional space of course). A circle needs a center and radius. A square
+or rectangle needs two coordinates for the top left and bottom right corners and
+(possibly) a rotation. An irregular polygon needs a series of lines.
 
 # Smart Pointers
 
-Pointers with `*` and `->` overloaded. Using [smart pointers](http://en.wikipedia.org/wiki/Smart_pointer), we can make pointers to work in way that we don’t need to explicitly call delete. [Smart pointer](http://en.wikipedia.org/wiki/Smart_pointer) is a wrapper class over a pointer with operator like `*` and `->` overloaded. The objects of smart pointer class look like pointer, but can do many things that a normal pointer can’t like automatic destruction (yes, we don’t have to explicitly use delete), reference counting and more.
+Pointers with `*` and `->` overloaded. Using
+[smart pointers](http://en.wikipedia.org/wiki/Smart_pointer), we can make
+pointers to work in way that we don’t need to explicitly call delete.
+[Smart pointer](http://en.wikipedia.org/wiki/Smart_pointer) is a wrapper class
+over a pointer with operator like `*` and `->` overloaded. The objects of smart
+pointer class look like pointer, but can do many things that a normal pointer
+can’t like automatic destruction (yes, we don’t have to explicitly use delete),
+reference counting and more.
 
-The idea is to make a class with a pointer, destructor and overloaded operators like `* `and `->`. Since *destructor is automatically called when an object goes out of scope*, the dynamically allocated memory would automatically be deleted (or reference count can be decremented). Consider the following simple `smartPtr` class.
+The idea is to make a class with a pointer, destructor and overloaded operators
+like `* `and `->`. Since *destructor is automatically called when an object goes
+out of scope*, the dynamically allocated memory would automatically be deleted
+(or reference count can be decremented). Consider the following simple `smartPtr`
+class.
 
 
 ```cpp
@@ -424,9 +454,11 @@ public:
 };
 ```
 
-Because there are 3 classes here, the compiler will set up 3 virtual tables: one for Base, one for D1, and one for D2.
+Because there are 3 classes here, the compiler will set up 3 virtual tables: one
+for Base, one for D1, and one for D2.
 
-The compiler also adds a hidden pointer to the most base class that uses virtual functions. Compiler does this automatically.
+The compiler also adds a hidden pointer to the most base class that uses virtual
+functions. Compiler does this automatically.
 
 ```cpp
 class Base {
@@ -525,7 +557,11 @@ int main() {
 ```
 
 
-The use of the keyword virtual in these two classes causes them to share a single common subobject of their base class Parent. Since there is only one copy of basedata, there is no ambiguity when it is referred to in Grandchild. The need for virtual base classes may indicate a conceptual problem with your use of multiple inheritance, so they should be used with caution.
+The use of the keyword virtual in these two classes causes them to share a single
+common subobject of their base class Parent. Since there is only one copy of
+basedata, there is no ambiguity when it is referred to in Grandchild. The need
+for virtual base classes may indicate a conceptual problem with your use of
+multiple inheritance, so they should be used with caution.
 
 # Friend Functions
 
@@ -572,7 +608,8 @@ int main() {
 ```
 
 
-Note the declaration, they can go anywhere (private, protected) not necessarily in public.
+Note the declaration, they can go anywhere (private, protected) not necessarily
+in public.
 
 # Friend Classes
 
@@ -645,7 +682,8 @@ constructor of A
 constructor of B
 ```
 
-However, if we try to instantiate A, we will get error: `_main.cpp:25:7: error: ‘A::A()’ is private within this context`.
+However, if we try to instantiate A, we will get error:
+`_main.cpp:25:7: error: ‘A::A()’ is private within this context`.
 
 # Static Functions
 
