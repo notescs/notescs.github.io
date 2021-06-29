@@ -1,15 +1,14 @@
 ---
 title: Word Ladder - Length of Shortest Transformation to Reach a Target Word
+link: https://csposts.com/dsa/word-ladder
 date: "2021-06-05"
 template: "post"
 category: "Data Structures & Algorithms"
 tags:
   - "Breadth First Search"
   - "cpp"
-  - "python"
   - "Difficulty: Hard"
 description: "Find the length of the shortest transformation to reach a target word."
-link: https://csposts.com/dsa/word-ladder
 ---
 
 <!-- Problem Statement -->
