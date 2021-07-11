@@ -2,8 +2,6 @@
 
 OSI (Open Systems Interconnection) Model:
 
-
-
 *   **_Physical layer_**
 *   **_Data layer_**
 *   **_Network layer_**
@@ -16,12 +14,11 @@ OSI (Open Systems Interconnection) Model:
     *   token management: preventing two parties from attempting the same crucial operation simultaneously
     *   synchronization: checkpointing long transmission to pick up from where they left up off in the event of a crash and subsequent recovery
 
-*   **Presentation layer**: Presentation layer is concerned with syntax and semantics of the information transmitted. 
-*   **_Application layer_**
+* **Presentation layer**: Presentation layer is concerned with syntax and
+  semantics of the information transmitted. 
+* **_Application layer_**
 
 TCP/IP (Transmission Control Protocol/ Internet Protocol) Reference Model:
-
-
 
 *   Link layer (== Data Link layer)
 *   Internet layer (== Network layer of OSI)
@@ -30,48 +27,66 @@ TCP/IP (Transmission Control Protocol/ Internet Protocol) Reference Model:
 
 Structure followed in Kurose & Ross, E6 book (_top-down approach_):
 
-
-
 *   Application layer
 *   Transport layer
 *   Network layer
 *   Data link layer
 *   Physical layer
 
-
 # Application Layer
 
-
 ## Transport Services Available to Applications
-
-
 
 *   Reliable Data Transfer
 *   Throughput
 *   Timing
 *   Security
 
-
 ## TCP Services
 
-
-
-*   **Connection-oriented Services**: TCP has the client and server exchange transport layer control information with each other before the application-level messages begin to flow. This so-called handshaking procedure alerts the client and server, allowing them to prepare for an onslaught of packets. After the handshaking phase, a TCP connection is said to exist between the sockets of the two processes. The connection is a full-duplex connection in that the two processes can send messages to each other over the connection at the same time. When the application finishes sending messages, it must tear down the connection.
-*   **Reliable data transfer service**: The communicating processes can rely on TCP to deliver all data sent without error and in the proper order. When one side of the application passes a stream of bytes into a socket, it can count on TCP to deliver the same stream of bytes to the receiving socket, with no missing or duplicate bytes.
+- **Connection-oriented Services**: TCP has the client and server exchange
+  transport layer control information with each other before the application-level
+  messages begin to flow. This so-called handshaking procedure alerts the client
+  and server, allowing them to prepare for an onslaught of packets. After the
+  handshaking phase, a TCP connection is said to exist between the sockets of the
+  two processes. The connection is a full-duplex connection in that the two processes
+  can send messages to each other over the connection at the same time. When the
+  application finishes sending messages, it must tear down the connection.
+- **Reliable data transfer service**: The communicating processes can rely on
+  TCP to deliver all data sent without error and in the proper order. When one side
+  of the application passes a stream of bytes into a socket, it can count on TCP
+  to deliver the same stream of bytes to the receiving socket, with no missing or
+  duplicate bytes.
 
 TCP also includes a congestion-control mechanism.
 
-
 ## UDP Services
 
-UDP is a no-frills, lightweight transport protocol, providing minimal services. UDP is connectionless, so there is no handshaking before the two processes start to communicate. UDP provides an unreliable data transfer service—that is, when a process sends a message into a UDP socket, UDP provides no guarantee that the message will ever reach the receiving process. Furthermore, messages that do arrive at the receiving process may arrive out of order. UDP does not include a congestion-control mechanism, so the sending side of UDP can pump data into the layer below (the network layer) at any rate it pleases. (Note, however, that the actual end-to-end throughput may be less than this rate due to the limited transmission capacity of intervening links or due to congestion).
+UDP is a no-frills, lightweight transport protocol, providing minimal services.
+UDP is connectionless, so there is no handshaking before the two processes start
+to communicate. UDP provides an unreliable data transfer service—that is, when a
+process sends a message into a UDP socket, UDP provides no guarantee that the message
+will ever reach the receiving process. Furthermore, messages that do arrive at the
+receiving process may arrive out of order. UDP does not include a congestion-control
+mechanism, so the sending side of UDP can pump data into the layer below (the network
+layer) at any rate it pleases. (Note, however, that the actual end-to-end throughput
+may be less than this rate due to the limited transmission capacity of intervening
+links or due to congestion).
 
 
 ## HTTP (HyperText Transfer Protocol)
 
 **_[Hypertext Transfer Protocol (HTTP)](https://www.geeksforgeeks.org/http-non-persistent-persistent-connection/): is an application-level protocol that uses TCP as an underlying transport and typically runs on port 80. HTTP is a stateless protocol i.e. server maintains no information about past client requests._**
 
-It is important to note that the server sends requested files to clients without storing any state information about the client. If a particular client asks for the same object twice in a period of a few seconds, the server does not respond by saying that it just served the object to the client; instead, the server resends the object, as it has completely forgotten what it did earlier. Because an HTTP server maintains no information about the clients, HTTP is said to be a stateless protocol. We also remark that the Web uses the client-server application architecture. A Web server is always on, with a fixed IP address, and it services requests from potentially millions of different browsers.
+It is important to note that the server sends requested files to clients without
+storing any state information about the client. If a particular client asks for
+the same object twice in a period of a few seconds, the server does not respond
+by saying that it just served the object to the client; instead, the server resends
+the object, as it has completely forgotten what it did earlier. Because an HTTP
+server maintains no information about the clients, HTTP is said to be a stateless
+protocol. We also remark that the Web uses the client-server application architecture.
+A Web server is always on, with a fixed IP address, and it services requests from
+potentially millions of different browsers.
 
 
 ### HTTP Message Format
@@ -79,7 +94,7 @@ It is important to note that the server sends requested files to clients without
 HTTP Request Message
 
 
-```
+```text
 GET /somedir/page.html HTTP/1.1
 Host: www.someschool.edu
 Connection: close
@@ -97,7 +112,7 @@ Accept-language: fr
 ### HTTP Response Message
 
 
-```
+```text
 HTTP/1.1 200 OK
 Connection: close
 Date: Tue, 09 Aug 2011 15:44:04 GMT
@@ -112,24 +127,30 @@ Content-Type: text/html
 
 ![alt_text](images/image9.png "image_tooltip")
 
-
-
 ### Common HTTP Status Codes 
 
 **200 OK**: Request succeeded and the information is returned in the response.
 
-**301 Moved Permanently**: Requested object has been permanently moved; the new URL is specified in `Location:` header of the response message. The client software will automatically retrieve the new URL.
+**301 Moved Permanently**: Requested object has been permanently moved; the new URL
+is specified in `Location:` header of the response message. The client software
+will automatically retrieve the new URL.
 
-**400 Bad Request**: This is a generic error code indicating that the request could not be understood by the server.
+**400 Bad Request**: This is a generic error code indicating that the request could
+not be understood by the server.
 
 **404 Not Found**: The requested document does not exist on this server.
 
-**505 HTTP Version Not Supported**: The requested HTTP protocol version is not supported by the server.
+**505 HTTP Version Not Supported**: The requested HTTP protocol version is not
+supported by the server.
 
 
 ## File Transfer Protocol (FTP)
 
-**_[File Transfer Protocol (FTP)](https://www.geeksforgeeks.org/computer-network-file-transfer-protocol-ftp/): File Transfer Protocol(FTP) is an application layer protocol which moves files between local and remote file systems. It runs on top of TCP, like HTTP. To transfer a file, 2 TCP connections are used by FTP in parallel: control connection and data connection._**
+**_[File Transfer Protocol (FTP)](https://www.geeksforgeeks.org/computer-network-file-transfer-protocol-ftp/)
+: File Transfer Protocol(FTP) is an application layer protocol which moves files
+between local and remote file systems. It runs on top of TCP, like HTTP. To transfer
+a file, 2 TCP connections are used by FTP in parallel: control connection and data
+connection._**
 
 
 ![alt_text](images/image13.png "image_tooltip")
@@ -137,20 +158,23 @@ Content-Type: text/html
 
 FTP uses two parallel connections to transfer a file:
 
-
-
-*   control connection
-*   data connection
-
+- control connection
+- data connection
 
 ![alt_text](images/image27.png "image_tooltip")
 
 
-The control connection is used for sending control information between the two hosts—information such as user identification, password, commands to change remote directory, and commands to “put” and “get” files.
+The control connection is used for sending control information between the two
+hosts—information such as user identification, password, commands to change remote
+directory, and commands to “put” and “get” files.
 
 The data connection is used to actually send a file.
 
-Because FTP uses a separate control connection, FTP is said to send its control information **out-of-band**. HTTP sends request and response header lines into the same TCP connection that carries the transferred file itself. For this reason, HTTP is said to send its control information **in-band**. SMTP, the main protocol for electronic mail, also sends control information **in-band**.
+Because FTP uses a separate control connection, FTP is said to send its control
+information **out-of-band**. HTTP sends request and response header lines into the
+same TCP connection that carries the transferred file itself. For this reason,
+HTTP is said to send its control information **in-band**. SMTP, the main protocol
+for electronic mail, also sends control information **in-band**.
 
 When a user starts an FTP session with a remote host, the client side of FTP (user) first initiates a control TCP connection with the server side (remote host) on server port number 21. The client side of FTP sends the user identification and password over this control connection. The client side of FTP also sends, over the control connection, commands to change the remote directory. When the server side receives a command for a file transfer over the control connection (either to, or from, the remote host), the server side initiates a TCP data connection to the client side. FTP sends exactly one file over the data connection and then closes the data connection. If, during the same session, the user wants to transfer another file, FTP opens another data connection. Thus, with FTP, the control connection remains open throughout the duration of the user session, but a new data connection is created for each file transferred within a session (that is, the data-connection is non-persistent).
 
@@ -170,7 +194,7 @@ Throughout a session, the FTP server must maintain state about the user. In part
 `STOR filename`: Used to store (that is, put) a file into the current directory of the remote host.
 
 
-```
+```text
 • 331 Username OK, password required
 • 125 Data connection already open; transfer starting
 • 425 Can't open data connection
@@ -193,26 +217,15 @@ Suppose Alice wants to send Bob a simple message:
 
 
 1. Alice invokes her user agent for e-mail, provides Bob’s e-mail address (for example, bob@someschool.edu), composes a message, and instructs the user agent to send the message.
-
-
 2. Alice’s user agent sends the message to her mail server, where it is placed in a message queue.
-
-
 3. The client side of SMTP, running on Alice’s mail server, sees the message in the message queue. It opens a TCP connection to an SMTP server, running on Bob’s mail server.
-
-
 4. After some initial SMTP handshaking, the SMTP client sends Alice’s message into the TCP connection.
-
-
 5. At Bob’s mail server, the server side of SMTP receives the message. Bob’s mail server then places the message in Bob’s mailbox.
-
-
 6. Bob invokes his user agent to read the message at his convenience.
 
 SMTP does not generally use intermediate mail servers.
 
 SMTP uses persistent connection.
-
 
 ### HTTP vs SMTP
 
@@ -226,7 +239,6 @@ A third important difference concerns how a document consisting of text and imag
 ### Mail Access Protocols
 
 ![alt_text](images/image20.png "image_tooltip")
-
 
 
 #### POP3 (Post Office Protocol - Version 3)
@@ -250,25 +262,36 @@ With this service, the user agent is an ordinary Web browser, and the user commu
 
 ## Domain Name System (DNS)
 
-_DNS is a host name to IP address translation service. DNS is a distributed database implemented in a hierarchy of name servers. It is an application layer protocol for message exchange between clients and servers._
-
+_DNS is a host name to IP address translation service. DNS is a distributed database
+implemented in a hierarchy of name servers. It is an application layer protocol for
+message exchange between clients and servers._
 
 ### DNS Services
 
-
-
-*   Translating host name to IP addresses
-*   **Host aliasing**: A host with a complicated hostname can have one or more alias names. For example, a hostname such as relay1.west-coast.enterprise.com could have, say, two aliases such as enterprise.com and www.enterprise.com. In this case, the hostname relay1.westcoast.enterprise.com is said to be a canonical hostname.
-*   **Mail server aliasing**: For obvious reasons, it is highly desirable that e-mail addresses be mnemonic. For example, if Bob has an account with Hotmail, Bob’s e-mail address might be as simple as bob@hotmail.com. However, the hostname of the Hotmail mail server is more complicated and much less mnemonic than simply hotmail.com (for example, the canonical hostname might be something like relay1.west-coast.hotmail.com). DNS can be invoked by a mail application to obtain the canonical hostname for a supplied alias hostname as well as the IP address of the host. In fact, the MX record permits a company’s mail server and Web server to have identical (aliased) hostnames; for example, a company’s Web server and mail server can both be called enterprise.com.
-*   **Load distribution**: DNS is also used to perform load distribution among replicated servers, such as replicated Web servers. Busy sites, such as cnn.com, are replicated over multiple servers, with each server running on a different end system and each having a different IP address. For replicated Web servers, a set of IP addresses is thus associated with one canonical hostname. The DNS database contains this set of IP addresses. When clients make a DNS query for a name mapped to a set of addresses, the server responds with the entire set of IP addresses, but rotates the ordering of the addresses within each reply. Because a client typically sends its HTTP request message to the IP address that is listed first in the set, DNS rotation distributes the traffic among the replicated servers.
+- Translating host name to IP addresses
+- **Host aliasing**: A host with a complicated hostname can have one or more alias names. For example, a hostname such as relay1.west-coast.enterprise.com could have, say, two aliases such as enterprise.com and www.enterprise.com. In this case, the hostname relay1.westcoast.enterprise.com is said to be a canonical hostname.
+- **Mail server aliasing**: For obvious reasons, it is highly desirable that e-mail addresses be mnemonic. For example, if Bob has an account with Hotmail, Bob’s e-mail address might be as simple as bob@hotmail.com. However, the hostname of the Hotmail mail server is more complicated and much less mnemonic than simply hotmail.com (for example, the canonical hostname might be something like relay1.west-coast.hotmail.com). DNS can be invoked by a mail application to obtain the canonical hostname for a supplied alias hostname as well as the IP address of the host. In fact, the MX record permits a company’s mail server and Web server to have identical (aliased) hostnames; for example, a company’s Web server and mail server can both be called enterprise.com.
+- **Load distribution**: DNS is also used to perform load distribution among replicated servers, such as replicated Web servers. Busy sites, such as cnn.com, are replicated over multiple servers, with each server running on a different end system and each having a different IP address. For replicated Web servers, a set of IP addresses is thus associated with one canonical hostname. The DNS database contains this set of IP addresses. When clients make a DNS query for a name mapped to a set of addresses, the server responds with the entire set of IP addresses, but rotates the ordering of the addresses within each reply. Because a client typically sends its HTTP request message to the IP address that is listed first in the set, DNS rotation distributes the traffic among the replicated servers.
 
     DNS rotation is also used for e-mail so that multiple mail servers can have the same alias name. Also, content distribution companies such as Akamai have used DNS in more sophisticated ways [Dilley 2002] to provide Web content distribution (see Chapter 7).
 
 
-
 ### Overview of How DNS Works
 
-Suppose that some application (such as a Web browser or a mail reader) running in a user’s host needs to translate a hostname to an IP address. The application will invoke the client side of DNS, specifying the hostname that needs to be translated. (On many UNIX-based machines, gethostbyname() is the function call that an application calls in order to perform the translation.) DNS in the user’s host then takes over, sending a query message into the network. **All DNS query and reply messages are sent within UDP datagrams to port 53**. After a delay, ranging from milliseconds to seconds, DNS in the user’s host receives a DNS reply message that provides the desired mapping. This mapping is then passed to the invoking application. Thus, from the perspective of the invoking application in the user’s host, DNS is a black box providing a simple, straightforward translation service. But in fact, the black box that implements the service is complex, consisting of a large number of DNS servers distributed around the globe, as well as an application-layer protocol that specifies how the DNS servers and querying hosts communicate.
+Suppose that some application (such as a Web browser or a mail reader) running
+in a user’s host needs to translate a hostname to an IP address. The application
+will invoke the client side of DNS, specifying the hostname that needs to be translated.
+(On many UNIX-based machines, gethostbyname() is the function call that an application
+calls in order to perform the translation.) DNS in the user’s host then takes over,
+sending a query message into the network. **All DNS query and reply messages are
+sent within UDP datagrams to port 53**. After a delay, ranging from milliseconds
+to seconds, DNS in the user’s host receives a DNS reply message that provides the
+desired mapping. This mapping is then passed to the invoking application. Thus,
+from the perspective of the invoking application in the user’s host, DNS is a
+black box providing a simple, straightforward translation service. But in fact,
+the black box that implements the service is complex, consisting of a large
+number of DNS servers distributed around the globe, as well as an application-layer
+protocol that specifies how the DNS servers and querying hosts communicate.
 
 
 ## Peer-to-Peer Applications
@@ -284,7 +307,6 @@ Minimum distribution time:
 
 
 ![alt_text](images/image11.png "image_tooltip")
-
 
 
 ### BitTorrent
@@ -326,7 +348,7 @@ DNS Address (Option 6 – e.g., 8.8.8.8)
 
 Vendor Class Identifier (Option 43 – e.g., ‘unifi’ = 192.168.1.9 ##where unifi = controller)
 
-**[Simple Network Management Protocol (SNMP)](https://www.geeksforgeeks.org/computer-network-simple-network-management-protocol-snmp/)<span style="text-decoration:underline;"> </span>**: SNMP is an application layer protocol which uses UDP port number 161/162. SNMP is used to monitor network, detect network faults and sometimes even used to configure remote devices.
+**[Simple Network Management Protocol (SNMP)](https://www.geeksforgeeks.org/computer-network-simple-network-management-protocol-snmp/): SNMP is an application layer protocol which uses UDP port number 161/162. SNMP is used to monitor network, detect network faults and sometimes even used to configure remote devices.
 
 **Hypertext Transfer Protocol Secure (HTTPS)**: Cryptographic protocols such as SSL and/or TLS turn _http_ into _https_ i.e. **https** = **http** + **cryptographic protocols**. Also, to achieve this security in _https_, Public Key Infrastructure (PKI) is used because public keys can be used by several Web Browsers while private key can be used by the Web Server of that particular website. The distribution of these public keys is done via Certificates which are maintained by the Browser. You can check these certificates in your Browser settings. Uses port 443.
 
@@ -337,16 +359,12 @@ UDP Header
 
 ![alt_text](images/image19.png "image_tooltip")
 
-
-
-
 1. **Source Port :** Source Port is 2 Byte long field used to identify port number of source.
 2. **Destination Port :** It is 2 Byte long field, used to identify the port of destined packet.
 3. **Length :** Length is the length of UDP including header and the data. It is 16-bits field.
 4. **Checksum :** Checksum is 2 Bytes long field. It is the 16-bit one’s complement of the one’s complement sum of the UDP header, pseudo header of information from the IP header and the data, padded with zero octets at the end (if necessary) to make a multiple of two octets.
 
 **Notes –** Unlike TCP, Checksum calculation is not mandatory in UDP. No Error control or flow control is provided by UDP. Hence UDP depends on IP and ICMP for error reporting.
-
 
 
 *   Following implementation uses UDP as a transport layer protocol:
@@ -358,8 +376,6 @@ UDP Header
     *   TFTP, RTSP, RIP, OSPF.
 
 **When to use UDP?**
-
-
 
 *   Reduce the requirement of computer resources.
 *   When using the Multicast or Broadcast to transfer.
@@ -726,29 +742,23 @@ Leaky Bucket Algorithm
 
 Token Bucket
 
-A different but equivalent formulation is to imagine a network as a bucket that is being filled. The tap is running at a rate of R, and the bucket has a capacity of B. To send a packet, we must be able to take out tokens/water from the bucket.
+A different but equivalent formulation is to imagine a network as a bucket that
+is being filled. The tap is running at a rate of R, and the bucket has a capacity
+of B. To send a packet, we must be able to take out tokens/water from the bucket.
 
-				Tap
+```text
 
-				| | |
+				        Tap
 
-				| | |         Rate R
+				        | | |
+				        | | |       Rate R
+				        | | |
 
-				| | |
-
-
-                	
-
-			|		|   Capacity B
-
-Take out water/tokens|     Bucket	|
-
-
-            |		|
-
-
-            |______________|	
-
+			         |		        |   Capacity B
+Take out water/tokens|   Bucket	    |
+                     |		        |
+                     |______________|	
+```
 
 ### TCP Congestion Policy
 
@@ -834,16 +844,12 @@ Transmitting raw bits (0 or 1) over the communication channel:
 
 _Layer topology_
 
-
-
 *   Mesh
 *   Bus
 *   Ring
 *   Star
 
 _Transmission Modes_
-
-
 
 *   Simplex
 *   Half-duplex
@@ -860,6 +866,17 @@ _Transmission Modes_
 
 # Others
 
- 
+**Ports**: In computer networking,
+a **port** is a communication endpoint. Physical as well as wireless connections
+are terminated at ports of hardware devices. At the software level, within an
+operating system, a port is a logical construct that identifies a specific process
+or a type of network service. Ports are identified for each protocol and address
+combination by 16-bit unsigned numbers, commonly known as the **port number**.
+The most common protocols that use port numbers are the Transmission Control
+Protocol (TCP) and the User Datagram Protocol (UDP).
 
-**Ports**: In[ computer networking](https://en.wikipedia.org/wiki/Computer_networking), a **port** is a communication endpoint. Physical as well as wireless connections are terminated at ports of hardware devices. At the software level, within an[ operating system](https://en.wikipedia.org/wiki/Operating_system), a port is a logical construct that identifies a specific[ process](https://en.wikipedia.org/wiki/Process_(computing)) or a type of[ network service](https://en.wikipedia.org/wiki/Network_service). Ports are identified for each protocol and address combination by 16-bit unsigned numbers, commonly known as the **port number**. The most common protocols that use port numbers are the[ Transmission Control Protocol](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) (TCP) and the[ User Datagram Protocol](https://en.wikipedia.org/wiki/User_Datagram_Protocol) (UDP).
+
+# Credits
+
+Part of the note is taken from the Kurose & Ross, E6 book, geeksforgeeks website,
+and hpbn.co website.
