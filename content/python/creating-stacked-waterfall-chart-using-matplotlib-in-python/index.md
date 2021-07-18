@@ -147,6 +147,13 @@ def render_chart(data, df):
     plt.show()
 ```
 
+Let's call the functions to render the chart:
+
+```python
+data = get_data(df)
+render_chart(data, df)
+```
+
 ![](waterfall-chart.png)
 
 If we observe the image, we can see that the labels are overlapping with the bars
@@ -387,6 +394,13 @@ def render_chart(data, df):
     plt.legend(title='Labels', bbox_to_anchor=(1.0, 1), loc='best')
     plt.tight_layout()
     plt.show()
+```
+
+Let's call the functions to render the chart:
+
+```python
+data = get_data(df)
+render_chart(data, df)
 ```
 
 ![](waterfall-chart-stacked-fixed.png)
