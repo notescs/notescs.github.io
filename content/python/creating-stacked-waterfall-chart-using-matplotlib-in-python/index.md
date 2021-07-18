@@ -1,8 +1,7 @@
 ---
 title: Creating Stacked Waterfall Chart in Python using Matplotlib
-date: "2021-06-26" # Change this
+date: "2021-07-18" # Change this
 template: "post"
-draft: true # Change this
 category: "Python"
 tags:
   - "matplotlib"
@@ -52,7 +51,7 @@ Then, read the CSV file:
 df = pd.read_csv('./Waterfall-Chart-Data-Single.csv')
 ```
 
-The CSV file used in this code can be found [here](./Waterfall-Chart-Data-Single.csv).
+The CSV file used in this code can be found [here](https://github.com/notescs/notescs.github.io/blob/master/content/python/creating-stacked-waterfall-chart-using-matplotlib-in-python/Waterfall-Chart-Data-Single.csv).
 
 Now, in order to render the waterfall chart we will be using matplotlib's stacked
 bar chart. We will have an invisible base bar. The function `get_data` will be used
@@ -60,7 +59,7 @@ to calculate the values for the stacked bar chart.
 
 The data (used for rendering the stacked bar chart) for the above table would be:
 
-```json
+```python
 {'_Base': [0, 10983, 9981, 9981, 10020, 0],
  'Company A Up': [15203, 0, 0, 52, 0, 10020],
  'Company A Down': [0, -4220, -1002, 0, -13, 0]}
@@ -200,7 +199,7 @@ def render_chart(data, df):
 
 ![](waterfall-chart-fixed.png)
 
-Full code for this illustration can be found [here](#).
+Full code for this illustration can be found [here](https://github.com/notescs/notescs.github.io/blob/master/content/python/creating-stacked-waterfall-chart-using-matplotlib-in-python/Waterfall-Chart-Simple.ipynb).
 
 If you need simple waterfall chart, you don't need to follow this method since
 there are libraries which already do that ([Plotly](https://plotly.com/python/waterfall-charts/),
@@ -242,10 +241,12 @@ Then, read the CSV file:
 df = pd.read_csv('./Waterfall-Chart-Data.csv')
 ```
 
+Data for this illustration can be found [here](https://github.com/notescs/notescs.github.io/blob/master/content/python/creating-stacked-waterfall-chart-using-matplotlib-in-python/Waterfall-Chart-Data.csv).
+
 Like the previous illustration, we will be using matplotlib's stacked bar chart.
 For the above table `data` (used for rendering the stacked bar chart) would be:
 
-```json
+```python
 {'_Base': [0, 20506, 18944, 18944, 19030, 0],
  'Company A Up': [15203, 0, 0, 52, 0, 10020],
  'Company B Up': [12023, 0, 0, 58, 0, 9010],
@@ -390,7 +391,7 @@ def render_chart(data, df):
 
 ![](waterfall-chart-stacked-fixed.png)
 
-Full code can for this illustration can be found [here](#).
+Full code can for this illustration can be found [here](https://github.com/notescs/notescs.github.io/blob/master/content/python/creating-stacked-waterfall-chart-using-matplotlib-in-python/Waterfall-Chart-Stacked.ipynb).
 
 ## Usage in Power BI
 
